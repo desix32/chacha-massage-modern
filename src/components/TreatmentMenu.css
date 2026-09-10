@@ -1,0 +1,375 @@
+/* TreatmentMenu.css */
+.treatments-section {
+  padding: 80px 0;
+  background-color: var(--zen-paper);
+}
+
+.section-tag {
+  display: inline-block;
+  font-size: 0.82rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--zen-terracotta);
+  background-color: rgba(197, 95, 71, 0.08);
+  padding: 6px 16px;
+  border-radius: 999px;
+  margin-bottom: 12px;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  line-height: 1.15;
+  color: var(--zen-teak);
+  margin-bottom: 14px;
+}
+
+.section-subtitle {
+  font-size: 1.05rem;
+  color: var(--zen-muted);
+  max-width: 680px;
+  line-height: 1.6;
+}
+
+.center-sub {
+  margin: 0 auto;
+}
+
+/* Filter Tabs */
+.category-tabs-container {
+  margin: 36px 0 40px;
+  display: flex;
+  justify-content: center;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  padding-bottom: 8px;
+}
+
+.category-tabs {
+  display: inline-flex;
+  gap: 8px;
+  background-color: var(--zen-surface);
+  padding: 6px;
+  border-radius: 999px;
+  border: 1px solid var(--zen-border);
+}
+
+.category-tab {
+  padding: 9px 20px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--zen-muted);
+  border-radius: 999px;
+  transition: var(--transition);
+  white-space: nowrap;
+}
+
+.category-tab:hover {
+  color: var(--zen-teak);
+}
+
+.category-tab.active {
+  background-color: var(--zen-surface-card);
+  color: var(--zen-terracotta);
+  font-weight: 600;
+  box-shadow: var(--shadow-sm);
+}
+
+/* Treatments Grid */
+.treatments-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 28px;
+}
+
+.treatment-card {
+  background-color: var(--zen-surface-card);
+  border-radius: 18px;
+  overflow: hidden;
+  border: 1px solid var(--zen-border);
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition);
+  display: flex;
+  flex-direction: column;
+}
+
+.treatment-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--zen-gold);
+}
+
+.treatment-img-wrap {
+  position: relative;
+  height: 220px;
+  overflow: hidden;
+  background-color: var(--zen-surface);
+}
+
+.treatment-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.treatment-card:hover .treatment-img {
+  transform: scale(1.04);
+}
+
+.treatment-badge {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  background: rgba(36, 32, 30, 0.78);
+  backdrop-filter: blur(8px);
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  padding: 5px 12px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.treatment-body {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.treatment-name {
+  font-size: 1.5rem;
+  margin-bottom: 8px;
+  color: var(--zen-teak);
+}
+
+.treatment-desc {
+  font-size: 0.92rem;
+  color: var(--zen-muted);
+  line-height: 1.55;
+  margin-bottom: 16px;
+}
+
+.treatment-benefits {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.treatment-benefits li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.85rem;
+  color: var(--zen-charcoal);
+}
+
+.check-icon {
+  color: var(--zen-sage);
+  flex-shrink: 0;
+}
+
+/* Duration Matrix */
+.duration-matrix {
+  margin-top: auto;
+  padding-top: 16px;
+  border-top: 1px dashed var(--zen-border);
+}
+
+.duration-label {
+  display: block;
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--zen-muted);
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.duration-pills {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.duration-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 7px 12px;
+  font-size: 0.82rem;
+  font-weight: 500;
+  border-radius: 8px;
+  background-color: var(--zen-surface);
+  color: var(--zen-charcoal);
+  border: 1px solid var(--zen-border);
+  transition: var(--transition);
+}
+
+.duration-pill:hover {
+  background-color: var(--zen-surface-hover);
+}
+
+.duration-pill.active {
+  background-color: var(--zen-terracotta);
+  color: #ffffff;
+  border-color: var(--zen-terracotta);
+  box-shadow: 0 2px 6px rgba(197, 95, 71, 0.3);
+}
+
+.pill-star {
+  font-size: 0.75rem;
+  color: #ffeb3b;
+}
+
+/* Treatment Footer */
+.treatment-footer {
+  margin-top: 20px;
+  padding-top: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.price-display {
+  display: flex;
+  flex-direction: column;
+}
+
+.price-label {
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--zen-muted);
+}
+
+.price-amount {
+  display: flex;
+  align-items: baseline;
+  gap: 5px;
+  flex-wrap: wrap;
+}
+
+.price-amount .currency {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--zen-terracotta);
+}
+
+.price-amount .number {
+  font-size: 1.55rem;
+  font-weight: 700;
+  font-family: var(--font-serif);
+  color: var(--zen-teak);
+  line-height: 1;
+}
+
+.price-amount .vat-note {
+  font-size: 0.7rem;
+  color: var(--zen-sage);
+  font-weight: 500;
+  display: block;
+  width: 100%;
+}
+
+.book-treatment-btn {
+  padding: 10px 18px;
+  font-size: 0.9rem;
+  border-radius: 10px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 600;
+  white-space: nowrap;
+  background-color: var(--zen-terracotta);
+  color: #ffffff;
+  transition: var(--transition);
+}
+
+.book-treatment-btn:hover {
+  background-color: var(--zen-terracotta-hover);
+  box-shadow: var(--shadow-glow);
+}
+
+/* Guarantee Banner */
+.pricing-guarantee-banner {
+  margin-top: 50px;
+  background: linear-gradient(135deg, #f9f5ef 0%, #f0e6d9 100%);
+  border: 1px solid var(--zen-border);
+  border-radius: 16px;
+  padding: 24px 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.guarantee-left {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.guarantee-icon {
+  font-size: 2.2rem;
+}
+
+.guarantee-left strong {
+  display: block;
+  font-size: 1.05rem;
+  color: var(--zen-teak);
+  margin-bottom: 2px;
+}
+
+.guarantee-left p {
+  font-size: 0.88rem;
+  color: var(--zen-muted);
+  margin: 0;
+}
+
+.btn-whatsapp {
+  background-color: var(--zen-whatsapp);
+  color: #ffffff;
+  padding: 12px 22px;
+  border-radius: 10px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 600;
+  font-size: 0.92rem;
+  transition: var(--transition);
+  box-shadow: 0 4px 14px rgba(37, 211, 102, 0.25);
+}
+
+.btn-whatsapp:hover {
+  background-color: var(--zen-whatsapp-hover);
+  transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+  .treatments-section {
+    padding: 50px 0;
+  }
+  .section-title {
+    font-size: 1.85rem;
+  }
+  .treatments-grid {
+    grid-template-columns: 1fr;
+  }
+  .pricing-guarantee-banner {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 20px;
+  }
+  .btn-whatsapp {
+    justify-content: center;
+  }
+}

@@ -1,0 +1,37 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+node_modules
+dist
+dist-ssr
+*.local
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Binaries and local testing scratch
+cloudflared.exe
+test_download.jpg
+test_dl.cjs
+inspect_drive.cjs
+inspect_drive_subfolders.cjs
+list_photos.cjs
+download_curated.cjs
+capture_heritage_gallery.cjs
+start_tunnel.cjs
+cf_tunnel.cjs
+

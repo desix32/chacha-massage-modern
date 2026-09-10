@@ -1,0 +1,219 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Outfit:wght@300;400;500;600;700&display=swap');
+
+:root {
+  /* Siam Zen Sanctuary Palette */
+  --zen-paper: #faf7f2;
+  --zen-surface: #f4ede4;
+  --zen-surface-hover: #ece3d7;
+  --zen-surface-card: #ffffff;
+  
+  --zen-teak: #24201e;
+  --zen-charcoal: #3c3633;
+  --zen-muted: #736b66;
+  --zen-border: #e6ded5;
+  --zen-border-light: #f0eae2;
+
+  --zen-terracotta: #c55f47;
+  --zen-terracotta-hover: #b04e38;
+  --zen-coral-soft: #ea856f;
+  --zen-sage: #6e826e;
+  --zen-gold: #c4995c;
+  --zen-whatsapp: #25d366;
+  --zen-whatsapp-hover: #20ba59;
+
+  /* Typography */
+  --font-serif: 'Cormorant Garamond', Georgia, serif;
+  --font-sans: 'Outfit', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+
+  /* Elevation */
+  --shadow-sm: 0 2px 8px rgba(36, 32, 30, 0.05);
+  --shadow-md: 0 8px 24px rgba(36, 32, 30, 0.08);
+  --shadow-lg: 0 16px 40px rgba(36, 32, 30, 0.12);
+  --shadow-glow: 0 8px 30px rgba(197, 95, 71, 0.25);
+
+  /* Transitions */
+  --transition: all 240ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  -webkit-tap-highlight-color: transparent;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  background-color: var(--zen-paper);
+  color: var(--zen-teak);
+  font-family: var(--font-sans);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  padding-bottom: 84px; /* Space for mobile sticky action dock */
+}
+
+@media (min-width: 769px) {
+  body {
+    padding-bottom: 0;
+  }
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Container */
+.container {
+  width: 100%;
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 18px;
+  }
+}
+
+/* Headings */
+h1, h2, h3, h4 {
+  font-family: var(--font-serif);
+  font-weight: 600;
+  line-height: 1.2;
+  color: var(--zen-teak);
+}
+
+.section-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--zen-terracotta);
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 12px;
+}
+
+.section-tag::before {
+  content: "";
+  display: inline-block;
+  width: 18px;
+  height: 2px;
+  background-color: var(--zen-terracotta);
+}
+
+.section-title {
+  font-size: clamp(2.2rem, 4vw, 3.4rem);
+  font-weight: 600;
+  letter-spacing: -0.5px;
+  margin-bottom: 16px;
+}
+
+.section-subtitle {
+  color: var(--zen-muted);
+  font-size: 1.1rem;
+  max-width: 640px;
+  margin-bottom: 40px;
+}
+
+/* Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 14px 28px;
+  border-radius: 40px;
+  font-weight: 500;
+  font-size: 0.95rem;
+  transition: var(--transition);
+  white-space: nowrap;
+}
+
+.btn-primary {
+  background: var(--zen-terracotta);
+  color: #ffffff;
+  box-shadow: 0 4px 14px rgba(197, 95, 71, 0.3);
+}
+
+.btn-primary:hover {
+  background: var(--zen-terracotta-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(197, 95, 71, 0.4);
+}
+
+.btn-secondary {
+  background: var(--zen-surface);
+  color: var(--zen-teak);
+  border: 1px solid var(--zen-border);
+}
+
+.btn-secondary:hover {
+  background: var(--zen-surface-hover);
+  border-color: var(--zen-muted);
+}
+
+.btn-whatsapp {
+  background: var(--zen-whatsapp);
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.btn-whatsapp:hover {
+  background: var(--zen-whatsapp-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(37, 211, 102, 0.35);
+}
+
+.btn-dark {
+  background: var(--zen-teak);
+  color: #ffffff;
+}
+
+.btn-dark:hover {
+  background: #000000;
+  transform: translateY(-2px);
+}
+
+/* Badges */
+.badge-pill {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.badge-terracotta {
+  background: rgba(197, 95, 71, 0.12);
+  color: var(--zen-terracotta);
+}
+
+.badge-sage {
+  background: rgba(110, 130, 110, 0.15);
+  color: var(--zen-sage);
+}

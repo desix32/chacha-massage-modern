@@ -1,0 +1,376 @@
+/* BookingModal.css */
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 99999;
+  background-color: rgba(24, 21, 19, 0.75);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  animation: modalFadeIn 0.25s ease;
+}
+
+@keyframes modalFadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.modal-dialog {
+  background-color: var(--zen-surface-card);
+  width: 100%;
+  max-width: 620px;
+  max-height: 90vh;
+  overflow-y: auto;
+  border-radius: 20px;
+  box-shadow: var(--shadow-lg);
+  position: relative;
+  border: 1px solid var(--zen-border);
+  animation: modalSlideUp 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes modalSlideUp {
+  from { transform: translateY(20px) scale(0.97); }
+  to { transform: translateY(0) scale(1); }
+}
+
+.modal-close-btn {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: var(--zen-surface);
+  color: var(--zen-teak);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--transition);
+  z-index: 10;
+}
+
+.modal-close-btn:hover {
+  background-color: var(--zen-surface-hover);
+  transform: rotate(90deg);
+}
+
+.modal-header {
+  padding: 28px 28px 16px;
+  border-bottom: 1px solid var(--zen-border-light);
+}
+
+.modal-title {
+  font-size: 1.8rem;
+  color: var(--zen-teak);
+  margin: 6px 0 4px;
+}
+
+.modal-desc {
+  font-size: 0.88rem;
+  color: var(--zen-muted);
+}
+
+.form-body {
+  padding: 24px 28px 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-label {
+  font-size: 0.82rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--zen-teak);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* Branch Pills */
+.branch-pills-row {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 8px;
+}
+
+.branch-pill {
+  padding: 10px 12px;
+  border-radius: 10px;
+  background-color: var(--zen-surface);
+  border: 1px solid var(--zen-border);
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  transition: var(--transition);
+}
+
+.branch-pill span {
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--zen-teak);
+}
+
+.branch-pill small {
+  font-size: 0.72rem;
+  color: var(--zen-muted);
+}
+
+.branch-pill.active {
+  background-color: var(--zen-surface-card);
+  border-color: var(--zen-terracotta);
+  box-shadow: 0 0 0 2px rgba(197, 95, 71, 0.2);
+}
+
+.branch-pill.active span {
+  color: var(--zen-terracotta);
+}
+
+/* Form Controls */
+.form-select, .form-input {
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 10px;
+  border: 1px solid var(--zen-border);
+  background-color: var(--zen-surface);
+  color: var(--zen-teak);
+  font-family: inherit;
+  font-size: 0.95rem;
+  outline: none;
+  transition: var(--transition);
+}
+
+.form-select:focus, .form-input:focus {
+  border-color: var(--zen-terracotta);
+  background-color: #fff;
+  box-shadow: 0 0 0 3px rgba(197, 95, 71, 0.15);
+}
+
+/* Duration options */
+.duration-options {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+}
+
+.duration-opt-btn {
+  padding: 10px 8px;
+  border-radius: 10px;
+  background-color: var(--zen-surface);
+  border: 1px solid var(--zen-border);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  transition: var(--transition);
+}
+
+.duration-opt-btn .dur-text {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--zen-charcoal);
+}
+
+.duration-opt-btn .dur-price {
+  font-size: 0.78rem;
+  color: var(--zen-muted);
+}
+
+.duration-opt-btn.active {
+  background-color: var(--zen-terracotta);
+  border-color: var(--zen-terracotta);
+  color: #fff;
+}
+
+.duration-opt-btn.active .dur-text,
+.duration-opt-btn.active .dur-price {
+  color: #fff;
+}
+
+/* 2 Column Row */
+.form-row-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
+/* Guests & Pressure Toggles */
+.guests-toggle, .pressure-toggle {
+  display: flex;
+  gap: 6px;
+}
+
+.guest-opt-btn, .pressure-btn {
+  flex: 1;
+  padding: 9px 4px;
+  font-size: 0.82rem;
+  font-weight: 500;
+  border-radius: 8px;
+  background-color: var(--zen-surface);
+  border: 1px solid var(--zen-border);
+  color: var(--zen-charcoal);
+  text-align: center;
+  transition: var(--transition);
+}
+
+.guest-opt-btn.active, .pressure-btn.active {
+  background-color: var(--zen-surface-card);
+  border-color: var(--zen-terracotta);
+  color: var(--zen-terracotta);
+  font-weight: 600;
+  box-shadow: var(--shadow-sm);
+}
+
+/* Modal Total Bar */
+.modal-total-bar {
+  background: linear-gradient(135deg, var(--zen-surface) 0%, #efe6da 100%);
+  border: 1px solid var(--zen-border);
+  border-radius: 12px;
+  padding: 16px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.total-label {
+  font-size: 0.76rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--zen-muted);
+  display: block;
+}
+
+.total-amount {
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+}
+
+.total-amount span {
+  font-size: 1.5rem;
+  font-family: var(--font-serif);
+  font-weight: 700;
+  color: var(--zen-terracotta);
+}
+
+.total-amount small {
+  font-size: 0.78rem;
+  color: var(--zen-muted);
+}
+
+.no-prepayment-badge {
+  font-size: 0.75rem;
+  color: var(--zen-sage);
+  font-weight: 600;
+  text-align: right;
+}
+
+/* Actions */
+.modal-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 4px;
+}
+
+.modal-submit-wa {
+  width: 100%;
+  padding: 14px;
+  font-size: 1rem;
+  font-weight: 600;
+  justify-content: center;
+  border-radius: 12px;
+}
+
+.modal-call-btn {
+  width: 100%;
+  padding: 12px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  justify-content: center;
+  border-radius: 12px;
+}
+
+/* Success State */
+.modal-success-state {
+  padding: 50px 30px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.success-icon-wrap {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: rgba(37, 211, 102, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.success-check-icon {
+  color: var(--zen-whatsapp);
+}
+
+.modal-success-state h2 {
+  font-size: 2rem;
+  color: var(--zen-teak);
+}
+
+.modal-success-state p {
+  color: var(--zen-muted);
+  max-width: 440px;
+}
+
+.success-summary-box {
+  background-color: var(--zen-surface);
+  border: 1px solid var(--zen-border);
+  border-radius: 12px;
+  padding: 18px 24px;
+  text-align: left;
+  width: 100%;
+  max-width: 420px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 0.9rem;
+  color: var(--zen-teak);
+}
+
+.close-success-btn {
+  margin-top: 10px;
+  padding: 12px 30px;
+  border-radius: 10px;
+}
+
+@media (max-width: 600px) {
+  .modal-dialog {
+    max-height: 94vh;
+    border-radius: 16px;
+  }
+  .modal-header {
+    padding: 20px 20px 12px;
+  }
+  .form-body {
+    padding: 16px 20px 20px;
+  }
+  .form-row-2 {
+    grid-template-columns: 1fr;
+  }
+  .branch-pills-row {
+    grid-template-columns: 1fr;
+  }
+}

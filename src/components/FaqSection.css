@@ -1,0 +1,116 @@
+/* FaqSection.css */
+.faq-section {
+  padding: 80px 0;
+  background-color: var(--zen-paper);
+}
+
+.faq-container {
+  max-width: 860px;
+  margin: 40px auto 0;
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+}
+
+.faq-accordion {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.faq-item {
+  background-color: var(--zen-surface-card);
+  border: 1px solid var(--zen-border);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: var(--transition);
+}
+
+.faq-item.open {
+  border-color: var(--zen-gold);
+  box-shadow: var(--shadow-sm);
+}
+
+.faq-question-btn {
+  width: 100%;
+  padding: 20px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  text-align: left;
+  background: none;
+  font-family: inherit;
+}
+
+.faq-question-text {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--zen-teak);
+}
+
+.faq-icon {
+  color: var(--zen-terracotta);
+  flex-shrink: 0;
+}
+
+.faq-chevron {
+  color: var(--zen-muted);
+  transition: transform 0.25s ease;
+  flex-shrink: 0;
+}
+
+.faq-chevron.rotated {
+  transform: rotate(180deg);
+  color: var(--zen-terracotta);
+}
+
+.faq-answer {
+  padding: 0 24px 22px 54px;
+  font-size: 0.94rem;
+  color: var(--zen-charcoal);
+  line-height: 1.65;
+  animation: fadeIn 0.2s ease;
+}
+
+.faq-help-box {
+  background: linear-gradient(135deg, var(--zen-surface) 0%, #ede3d4 100%);
+  border: 1px solid var(--zen-border);
+  border-radius: 16px;
+  padding: 30px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.faq-help-box h3 {
+  font-size: 1.4rem;
+  color: var(--zen-teak);
+}
+
+.faq-help-box p {
+  font-size: 0.92rem;
+  color: var(--zen-muted);
+  max-width: 480px;
+}
+
+.faq-wa-btn {
+  margin-top: 8px;
+}
+
+@media (max-width: 768px) {
+  .faq-section {
+    padding: 50px 0;
+  }
+  .faq-question-btn {
+    padding: 16px 18px;
+  }
+  .faq-answer {
+    padding: 0 18px 18px 18px;
+  }
+}

@@ -1,0 +1,105 @@
+/* MobileActionDock.css */
+.mobile-action-dock {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .mobile-action-dock {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-top: 1px solid var(--zen-border);
+    box-shadow: 0 -4px 20px rgba(36, 32, 30, 0.08);
+    padding: 6px 12px calc(8px + env(safe-area-inset-bottom, 0px));
+    animation: slideUp 0.3s ease;
+  }
+
+  @keyframes slideUp {
+    from { transform: translateY(100%); }
+    to { transform: translateY(0); }
+  }
+
+  .dock-branch-indicator {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    font-size: 0.75rem;
+    color: var(--zen-muted);
+    padding-bottom: 5px;
+    cursor: pointer;
+  }
+
+  .dock-pin-icon {
+    color: var(--zen-terracotta);
+  }
+
+  .dock-branch-text {
+    font-weight: 600;
+    color: var(--zen-teak);
+  }
+
+  .dock-switch {
+    font-weight: normal;
+    color: var(--zen-terracotta);
+    text-decoration: underline;
+  }
+
+  .dock-buttons {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr 1.5fr;
+    gap: 8px;
+    align-items: center;
+  }
+
+  .dock-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    padding: 10px 8px;
+    border-radius: 10px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-align: center;
+    transition: var(--transition);
+    height: 44px; /* Optimal touch target */
+  }
+
+  .dock-call {
+    background-color: var(--zen-surface);
+    color: var(--zen-teak);
+    border: 1px solid var(--zen-border);
+  }
+
+  .dock-call:active {
+    background-color: var(--zen-surface-hover);
+  }
+
+  .dock-whatsapp {
+    background-color: var(--zen-whatsapp);
+    color: #fff;
+    box-shadow: 0 2px 8px rgba(37, 211, 102, 0.3);
+  }
+
+  .dock-whatsapp:active {
+    background-color: var(--zen-whatsapp-hover);
+  }
+
+  .dock-book {
+    background-color: var(--zen-terracotta);
+    color: #fff;
+    box-shadow: var(--shadow-glow);
+  }
+
+  .dock-book:active {
+    background-color: var(--zen-terracotta-hover);
+  }
+}

@@ -1,0 +1,223 @@
+.hero-section {
+  position: relative;
+  min-height: 82vh;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  padding: 80px 0 90px;
+  background-color: var(--zen-paper);
+}
+
+.hero-bg-container {
+  position: absolute;
+  inset: 0;
+  background-image: url("/images/hero.jpg");
+  background-size: cover;
+  background-position: center;
+  filter: brightness(0.9);
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(250, 247, 242, 0.96) 0%,
+    rgba(250, 247, 242, 0.90) 50%,
+    rgba(250, 247, 242, 0.65) 100%
+  );
+}
+
+@media (max-width: 900px) {
+  .hero-overlay {
+    background: rgba(250, 247, 242, 0.93);
+  }
+}
+
+.hero-container {
+  position: relative;
+  z-index: 10;
+}
+
+.hero-content {
+  max-width: 720px;
+}
+
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(197, 95, 71, 0.1);
+  color: var(--zen-terracotta);
+  border: 1px solid rgba(197, 95, 71, 0.2);
+  padding: 6px 16px;
+  border-radius: 30px;
+  font-size: 0.84rem;
+  font-weight: 600;
+  margin-bottom: 24px;
+}
+
+.text-coral {
+  color: var(--zen-terracotta);
+}
+
+.hero-title {
+  font-size: clamp(2.8rem, 5.5vw, 4.4rem);
+  font-weight: 600;
+  line-height: 1.12;
+  letter-spacing: -0.5px;
+  color: var(--zen-teak);
+  margin-bottom: 20px;
+}
+
+.text-serif-italic {
+  font-style: italic;
+  font-weight: 400;
+  color: var(--zen-terracotta);
+}
+
+.hero-desc {
+  font-size: 1.15rem;
+  color: var(--zen-charcoal);
+  line-height: 1.65;
+  margin-bottom: 30px;
+  max-width: 620px;
+}
+
+/* Branch Pill */
+.hero-branch-pill {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #ffffff;
+  border: 1px solid var(--zen-border);
+  padding: 12px 18px;
+  border-radius: 14px;
+  box-shadow: var(--shadow-sm);
+  margin-bottom: 32px;
+  max-width: 580px;
+}
+
+.branch-pill-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.pill-status-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #25d366;
+  box-shadow: 0 0 0 3px rgba(37, 211, 102, 0.2);
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% { transform: scale(0.95); opacity: 0.8; }
+  50% { transform: scale(1.15); opacity: 1; }
+  100% { transform: scale(0.95); opacity: 0.8; }
+}
+
+.branch-pill-name {
+  display: block;
+  font-size: 0.95rem;
+  color: var(--zen-teak);
+}
+
+.branch-pill-sub {
+  display: block;
+  font-size: 0.8rem;
+  color: var(--zen-muted);
+}
+
+.branch-pill-switch {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--zen-terracotta);
+  text-decoration: underline;
+  padding: 6px 10px;
+  border-radius: 6px;
+  transition: var(--transition);
+}
+
+.branch-pill-switch:hover {
+  background: var(--zen-surface);
+}
+
+/* CTA Group */
+.hero-cta-group {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-bottom: 44px;
+}
+
+.hero-btn-main {
+  font-size: 1.05rem;
+  padding: 16px 36px;
+}
+
+.hero-btn-sub {
+  font-size: 1.05rem;
+  padding: 16px 30px;
+}
+
+/* Trust Bar */
+.hero-trust-bar {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  padding-top: 28px;
+  border-top: 1px solid var(--zen-border);
+}
+
+.trust-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.88rem;
+  font-weight: 500;
+  color: var(--zen-muted);
+}
+
+.trust-icon {
+  color: var(--zen-sage);
+  flex-shrink: 0;
+}
+
+@media (max-width: 768px) {
+  .hero-section {
+    min-height: auto;
+    padding: 50px 0 60px;
+  }
+
+  .hero-title {
+    font-size: 2.5rem;
+  }
+
+  .hero-desc {
+    font-size: 1rem;
+  }
+
+  .hero-branch-pill {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .hero-cta-group {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .hero-btn-main, .hero-btn-sub {
+    width: 100%;
+  }
+
+  .hero-trust-bar {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+  }
+}

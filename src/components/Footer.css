@@ -1,0 +1,157 @@
+/* Footer.css */
+.site-footer {
+  background-color: var(--zen-teak);
+  color: #efe8df;
+  padding: 70px 0 30px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.footer-top {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr 1fr;
+  gap: 40px;
+  padding-bottom: 50px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-logo {
+  display: flex;
+  flex-direction: column;
+  line-height: 1;
+  margin-bottom: 16px;
+}
+
+.footer-logo .logo-chacha {
+  font-family: var(--font-serif);
+  font-size: 1.8rem;
+  letter-spacing: 0.14em;
+  color: #fff;
+  font-weight: 700;
+}
+
+.footer-logo .logo-massage {
+  font-size: 0.72rem;
+  letter-spacing: 0.28em;
+  color: var(--zen-gold);
+  font-weight: 500;
+}
+
+.footer-logo .logo-bangkok {
+  font-size: 0.62rem;
+  letter-spacing: 0.2em;
+  color: rgba(255, 255, 255, 0.45);
+  margin-top: 4px;
+}
+
+.footer-about {
+  font-size: 0.88rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 20px;
+  max-width: 340px;
+}
+
+.footer-book-btn {
+  padding: 10px 20px;
+  font-size: 0.88rem;
+  border-radius: 8px;
+}
+
+.footer-col-title {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 18px;
+  letter-spacing: 0.04em;
+}
+
+.footer-links-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footer-links-list a,
+.footer-branch-btn {
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.7);
+  transition: var(--transition);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-align: left;
+  background: none;
+  border: none;
+  padding: 0;
+}
+
+.footer-links-list a:hover,
+.footer-branch-btn:hover {
+  color: var(--zen-gold);
+  transform: translateX(3px);
+}
+
+.f-icon {
+  color: var(--zen-terracotta);
+  flex-shrink: 0;
+}
+
+.footer-contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.footer-contact-info a {
+  color: var(--zen-gold);
+}
+
+.footer-wa-btn {
+  margin-top: 6px;
+  padding: 8px 14px;
+  font-size: 0.85rem;
+  width: fit-content;
+}
+
+.footer-bottom {
+  padding-top: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.78rem;
+  color: rgba(255, 255, 255, 0.45);
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.footer-credit {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.heart-icon {
+  color: var(--zen-terracotta);
+}
+
+@media (max-width: 900px) {
+  .footer-top {
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+  }
+}
+
+@media (max-width: 600px) {
+  .footer-top {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  .site-footer {
+    padding: 50px 0 30px;
+  }
+}
