@@ -29,7 +29,7 @@ export const TREATMENTS: Treatment[] = [
       { minutes: 90, priceTHB: 650, popular: true },
       { minutes: 120, priceTHB: 850 }
     ],
-    image: "/images/photoshoot/thai-stretch-back.jpg",
+    image: "./images/photoshoot/thai-stretch-back.jpg",
     tag: "Most Popular"
   },
   {
@@ -44,7 +44,7 @@ export const TREATMENTS: Treatment[] = [
       { minutes: 90, priceTHB: 850, popular: true },
       { minutes: 120, priceTHB: 1100 }
     ],
-    image: "/images/service-oil.jpg",
+    image: "./images/service-oil.jpg",
     tag: "Signature"
   },
   {
@@ -59,7 +59,7 @@ export const TREATMENTS: Treatment[] = [
       { minutes: 90, priceTHB: 580, popular: true },
       { minutes: 120, priceTHB: 750 }
     ],
-    image: "/images/service-foot.jpg",
+    image: "./images/service-foot.jpg",
     tag: "Best Value"
   },
   {
@@ -74,7 +74,7 @@ export const TREATMENTS: Treatment[] = [
       { minutes: 90, priceTHB: 950, popular: true },
       { minutes: 120, priceTHB: 1250 }
     ],
-    image: "/images/photoshoot/essential-oil-flower.jpg"
+    image: "./images/photoshoot/essential-oil-flower.jpg"
   },
   {
     id: "hot-herbal-compress",
@@ -87,7 +87,7 @@ export const TREATMENTS: Treatment[] = [
       { minutes: 90, priceTHB: 900, popular: true },
       { minutes: 120, priceTHB: 1200 }
     ],
-    image: "/images/gallery-7.jpg",
+    image: "./images/gallery-7.jpg",
     tag: "Traditional Remedy"
   },
   {
@@ -101,7 +101,7 @@ export const TREATMENTS: Treatment[] = [
       { minutes: 60, priceTHB: 450 },
       { minutes: 90, priceTHB: 650, popular: true }
     ],
-    image: "/images/photoshoot/thai-stretch-shoulder.jpg",
+    image: "./images/photoshoot/thai-stretch-shoulder.jpg",
     tag: "Office Relief"
   },
   {
@@ -114,7 +114,7 @@ export const TREATMENTS: Treatment[] = [
     durations: [
       { minutes: 60, priceTHB: 800, popular: true }
     ],
-    image: "/images/about-wellbeing.jpg"
+    image: "./images/about-wellbeing.jpg"
   },
   {
     id: "zen-harmony-package",
@@ -127,7 +127,7 @@ export const TREATMENTS: Treatment[] = [
       { minutes: 120, priceTHB: 1250, popular: true },
       { minutes: 150, priceTHB: 1550 }
     ],
-    image: "/images/hero.jpg",
+    image: "./images/hero.jpg",
     tag: "Top Rated Package"
   }
 ];

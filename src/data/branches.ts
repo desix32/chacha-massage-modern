@@ -31,8 +31,8 @@ export const BRANCHES: Branch[] = [
     whatsappUrl: "https://wa.me/66804530982?text=Hello%20Chacha%20Massage%20Soi%2015,%20I%20would%20like%20to%20inquire%20about%20booking%20a%20session.",
     hours: "10:00 AM – 11:30 PM Daily",
     googleMapsUrl: "https://maps.google.com/?q=Sukhumvit+Soi+15+Bangkok",
-    image: "/images/soi15-gallery.jpg",
-    interiorImages: ["/images/soi15-gallery.jpg", "/images/gallery-1.jpg", "/images/gallery-2.jpg"]
+    image: "./images/soi15-gallery.jpg",
+    interiorImages: ["./images/soi15-gallery.jpg", "./images/gallery-1.jpg", "./images/gallery-2.jpg"]
   },
   {
     id: "soi11",
@@ -48,8 +48,8 @@ export const BRANCHES: Branch[] = [
     whatsappUrl: "https://wa.me/66804530982?text=Hello%20Chacha%20Massage%20Soi%2011,%20I%20would%20like%20to%20inquire%20about%20booking%20a%20session.",
     hours: "10:00 AM – Midnight Daily",
     googleMapsUrl: "https://maps.google.com/?q=Sukhumvit+Soi+11+Bangkok",
-    image: "/images/soi11-front.jpg",
-    interiorImages: ["/images/soi11-room.jpg", "/images/soi11-interior.jpg", "/images/soi11-team-stock.jpg"]
+    image: "./images/soi11-front.jpg",
+    interiorImages: ["./images/soi11-room.jpg", "./images/soi11-interior.jpg", "./images/photoshoot/team-full-reception.jpg"]
   },
   {
     id: "ambassador",
@@ -65,8 +65,8 @@ export const BRANCHES: Branch[] = [
     whatsappUrl: "https://wa.me/66804530982?text=Hello%20Chacha%20Massage%20Ambassador,%20I%20would%20like%20to%20inquire%20about%20booking%20a%20session.",
     hours: "10:00 AM – 11:00 PM Daily",
     googleMapsUrl: "https://maps.google.com/?q=Ambassador+Hotel+Bangkok",
-    image: "/images/ambassador-front.jpg",
-    interiorImages: ["/images/ambassador-interior-1.jpg", "/images/ambassador-interior-2.jpg"]
+    image: "./images/ambassador-front.jpg",
+    interiorImages: ["./images/ambassador-interior-1.jpg", "./images/ambassador-interior-2.jpg"]
   },
   {
     id: "soi13",
@@ -82,7 +82,7 @@ export const BRANCHES: Branch[] = [
     whatsappUrl: "https://wa.me/66804530982?text=Hello%20Chacha%20Massage%20Soi%2013,%20I%20would%20like%20to%20inquire%20about%20booking%20a%20session.",
     hours: "10:30 AM – 11:00 PM Daily",
     googleMapsUrl: "https://maps.google.com/?q=Sukhumvit+Soi+13+Bangkok",
-    image: "/images/soi13-interior.jpg",
-    interiorImages: ["/images/soi13-interior.jpg", "/images/gallery-3.jpg", "/images/gallery-4.jpg"]
+    image: "./images/soi13-interior.jpg",
+    interiorImages: ["./images/soi13-interior.jpg", "./images/gallery-3.jpg", "./images/gallery-4.jpg"]
   }
 ];

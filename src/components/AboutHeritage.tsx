@@ -11,7 +11,7 @@ export const AboutHeritage: React.FC = () => {
           <div className="about-images-col">
             <div className="about-main-img-wrap">
               <img
-                src="/images/photoshoot/team-full-reception.jpg"
+                src="./images/photoshoot/team-full-reception.jpg"
                 alt="Chacha Massage Master Therapists & Concierge Team"
                 className="about-main-img"
                 loading="lazy"
@@ -23,7 +23,7 @@ export const AboutHeritage: React.FC = () => {
             </div>
             <div className="about-sub-img-wrap">
               <img
-                src="/images/photoshoot/neon-sign-ambient.jpg"
+                src="./images/photoshoot/neon-sign-ambient.jpg"
                 alt="Chacha Massage Bangkok Sanctuary Sign"
                 className="about-sub-img"
                 loading="lazy"

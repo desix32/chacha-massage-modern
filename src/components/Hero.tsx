@@ -13,6 +13,7 @@ export const Hero: React.FC<HeroProps> = ({ activeBranch, onOpenBooking }) => {
     <section className="hero-section">
       {/* Ambient background with overlay */}
       <div className="hero-bg-container">
+        <img src="./images/hero.jpg" alt="Chacha Massage Bangkok Sanctuary" className="hero-bg-img" />
         <div className="hero-overlay" />
       </div>
 

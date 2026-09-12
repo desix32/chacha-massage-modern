@@ -36,7 +36,7 @@ export const Navbar: React.FC<NavbarProps> = ({ activeBranch, onSelectBranch, on
         <div className="container nav-container">
           {/* Brand Logo */}
           <a href="#" className="nav-brand">
-            <img src="/images/logo.jpg" alt="Chacha Massage Bangkok" className="brand-logo-img" />
+            <img src="./images/logo.jpg" alt="Chacha Massage Bangkok" className="brand-logo-img" />
           </a>
 
           {/* Desktop Navigation Links */}

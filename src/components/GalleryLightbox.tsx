@@ -10,18 +10,18 @@ interface GalleryItem {
 }
 
 const GALLERY_ITEMS: GalleryItem[] = [
-  { id: 1, src: '/images/photoshoot/team-full-reception.jpg', title: 'Our Dedicated Master Therapists & Reception Team', category: 'ambiance' },
-  { id: 2, src: '/images/photoshoot/thai-stretch-back.jpg', title: 'Royal Thai Passive Yogic Back Stretch', category: 'wellness' },
-  { id: 3, src: '/images/photoshoot/neon-sign-ambient.jpg', title: 'Chacha Massage Signature Ambient Wall', category: 'ambiance' },
-  { id: 4, src: '/images/photoshoot/thai-hall-curtains.jpg', title: 'Traditional Thai Floor Hall with Privacy Curtains', category: 'rooms' },
-  { id: 5, src: '/images/photoshoot/private-suite-bed.jpg', title: 'Private Aromatherapy & Herbal Suite', category: 'rooms' },
-  { id: 6, src: '/images/photoshoot/thai-stretch-shoulder.jpg', title: 'Therapeutic Cervical & Scapula Acupressure', category: 'wellness' },
-  { id: 7, src: '/images/photoshoot/essential-oil-flower.jpg', title: 'Cold-Pressed Botanical Massage Oils & Frangipani', category: 'wellness' },
-  { id: 8, src: '/images/photoshoot/spa-lotions-towels.jpg', title: 'Fresh Sanitized Linens & Botanical Lotions', category: 'facilities' },
-  { id: 9, src: '/images/gallery-3.jpg', title: 'Sukhumvit Foot Reflexology Lounge', category: 'facilities' },
-  { id: 10, src: '/images/soi11-room.jpg', title: 'Deluxe Private Suite @ Soi 11', category: 'rooms' },
-  { id: 11, src: '/images/gallery-7.jpg', title: 'Steamed Traditional Thai Herbal Compresses', category: 'wellness' },
-  { id: 12, src: '/images/soi15-gallery.jpg', title: 'Sukhumvit 15 Flagship Entryway', category: 'facilities' }
+  { id: 1, src: './images/photoshoot/team-full-reception.jpg', title: 'Our Dedicated Master Therapists & Reception Team', category: 'ambiance' },
+  { id: 2, src: './images/photoshoot/thai-stretch-back.jpg', title: 'Royal Thai Passive Yogic Back Stretch', category: 'wellness' },
+  { id: 3, src: './images/photoshoot/neon-sign-ambient.jpg', title: 'Chacha Massage Signature Ambient Wall', category: 'ambiance' },
+  { id: 4, src: './images/photoshoot/thai-hall-curtains.jpg', title: 'Traditional Thai Floor Hall with Privacy Curtains', category: 'rooms' },
+  { id: 5, src: './images/photoshoot/private-suite-bed.jpg', title: 'Private Aromatherapy & Herbal Suite', category: 'rooms' },
+  { id: 6, src: './images/photoshoot/thai-stretch-shoulder.jpg', title: 'Therapeutic Cervical & Scapula Acupressure', category: 'wellness' },
+  { id: 7, src: './images/photoshoot/essential-oil-flower.jpg', title: 'Cold-Pressed Botanical Massage Oils & Frangipani', category: 'wellness' },
+  { id: 8, src: './images/photoshoot/spa-lotions-towels.jpg', title: 'Fresh Sanitized Linens & Botanical Lotions', category: 'facilities' },
+  { id: 9, src: './images/gallery-3.jpg', title: 'Sukhumvit Foot Reflexology Lounge', category: 'facilities' },
+  { id: 10, src: './images/soi11-room.jpg', title: 'Deluxe Private Suite @ Soi 11', category: 'rooms' },
+  { id: 11, src: './images/gallery-7.jpg', title: 'Steamed Traditional Thai Herbal Compresses', category: 'wellness' },
+  { id: 12, src: './images/soi15-gallery.jpg', title: 'Sukhumvit 15 Flagship Entryway', category: 'facilities' }
 ];
 
 export const GalleryLightbox: React.FC = () => {
