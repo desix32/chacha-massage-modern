@@ -21,6 +21,7 @@ export interface Branch {
   image: string;
   interiorImages: string[];
   specialOffer?: BranchSpecialOffer;
+  isComingSoon?: boolean;
 }
 
 export const BRANCHES: Branch[] = [
@@ -32,7 +33,7 @@ export const BRANCHES: Branch[] = [
     address: "The Trendy Building, 10/12 Sukhumvit Soi 13, Khlong Toei Nuea, Watthana, Bangkok 10110",
     district: "Sukhumvit 13 / Nana-Asok",
     bts: "BTS Nana / Asok (6 min walk)",
-    phone: "+66 80 453 0982",
+    phone: "080 453 0982",
     phoneRaw: "+66804530982",
     whatsapp: "+66804530982",
     whatsappUrl: "https://wa.me/66804530982?text=Hello%20Chacha%20Massage%20Soi%2013,%20I%20would%20like%20to%20inquire%20about%20booking%20a%20session.",
@@ -54,7 +55,7 @@ export const BRANCHES: Branch[] = [
     address: "717 Sukhumvit Rd (Soi 11), Khlong Toei Nuea, Watthana, Bangkok 10110",
     district: "Nana / Sukhumvit 11",
     bts: "BTS Nana (4 min walk)",
-    phone: "+66 2 082 5468",
+    phone: "02 082 5468 / 092 828 5468",
     phoneRaw: "+6620825468",
     whatsapp: "+66804530982",
     whatsappUrl: "https://wa.me/66804530982?text=Hello%20Chacha%20Massage%20Soi%2011,%20I%20would%20like%20to%20inquire%20about%20booking%20a%20session.",
@@ -76,7 +77,7 @@ export const BRANCHES: Branch[] = [
     address: "Ambassador Hotel Bangkok, 171 Sukhumvit 11 Aly, Bangkok 10110",
     district: "Sukhumvit 11 / Nana",
     bts: "BTS Nana (3 min walk)",
-    phone: "+66 2 255 8499",
+    phone: "02 255 8499",
     phoneRaw: "+6622558499",
     whatsapp: "+66804530982",
     whatsappUrl: "https://wa.me/66804530982?text=Hello%20Chacha%20Massage%20Ambassador,%20I%20would%20like%20to%20inquire%20about%20booking%20a%20session.",
@@ -98,7 +99,7 @@ export const BRANCHES: Branch[] = [
     address: "Next to Night Hotel, 14/3 Sukhumvit 15, Khlong Toei Nuea, Watthana, Bangkok 10110",
     district: "Sukhumvit / Asok",
     bts: "BTS Asok & MRT Sukhumvit (5 min walk)",
-    phone: "+66 81 696 5982",
+    phone: "02 001 7659 / 081 696 5982",
     phoneRaw: "+66816965982",
     whatsapp: "+66816965982",
     whatsappUrl: "https://wa.me/66816965982?text=Hello%20Chacha%20Massage%20Soi%2015,%20I%20would%20like%20to%20inquire%20about%20booking%20a%20session.",
@@ -120,7 +121,7 @@ export const BRANCHES: Branch[] = [
     address: "32/3-4 Sukhumvit 21 Rd (Asoke), Khlong Toei Nuea, Watthana, Bangkok 10110",
     district: "Asoke / Sukhumvit 21",
     bts: "BTS Asok & MRT Sukhumvit (3 min walk)",
-    phone: "+66 2 120 4061",
+    phone: "02 120 4061",
     phoneRaw: "+6621204061",
     whatsapp: "+66804530982",
     whatsappUrl: "https://wa.me/66804530982?text=Hello%20Chacha%20Massage%20Asoke,%20I%20would%20like%20to%20inquire%20about%20booking%20a%20session.",
@@ -132,6 +133,29 @@ export const BRANCHES: Branch[] = [
       badge: "Asoke CBD Sanctuary",
       highlight: "Aromatherapy & Deep Stress Relief",
       promoText: "Prime Sukhumvit 21 location steps from BTS Asok & MRT. Open daily until midnight."
+    }
+  },
+  {
+    id: "sukhumvit-coming-soon",
+    name: "Chacha Massage @ Sukhumvit (Coming Soon)",
+    shortName: "Coming Soon",
+    tagline: "New Luxury Sanctuary Opening Soon",
+    address: "Prime Sukhumvit Location, Bangkok",
+    district: "Sukhumvit Corridor",
+    bts: "BTS Sukhumvit Line",
+    phone: "080 453 0982 (Inquiries)",
+    phoneRaw: "+66804530982",
+    whatsapp: "+66804530982",
+    whatsappUrl: "https://wa.me/66804530982?text=Hello%20Chacha%20Massage,%20I%20would%20like%20to%20inquire%20about%20the%20new%20Sukhumvit%20branch%20opening.",
+    hours: "Opening Soon • Late 2026",
+    googleMapsUrl: "https://maps.google.com/?q=Sukhumvit+Bangkok",
+    image: "./images/about-wellbeing.jpg",
+    interiorImages: ["./images/about-wellbeing.jpg", "./images/photoshoot/private-suite-bed.jpg", "./images/gallery-7.jpg"],
+    isComingSoon: true,
+    specialOffer: {
+      badge: "✨ Coming Soon",
+      highlight: "VIP Pre-Opening Preview & Inquiries",
+      promoText: "Our newest flagship oasis in Sukhumvit. Inquire via WhatsApp for grand opening invitations."
     }
   }
 ];

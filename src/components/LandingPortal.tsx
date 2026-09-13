@@ -110,6 +110,18 @@ export const LandingPortal: React.FC<LandingPortalProps> = ({ onSelectBranch }) 
                   {/* Key Metadata */}
                   <div className="portal-details-list">
                     <div className="portal-detail-row">
+                      <Phone size={16} className="detail-icon" />
+                      <a
+                        href={`tel:${branch.phoneRaw}`}
+                        className="portal-phone-text-link"
+                        onClick={e => e.stopPropagation()}
+                        title={`Direct Phone: ${branch.phone}`}
+                      >
+                        <strong>{branch.phone}</strong>
+                      </a>
+                    </div>
+
+                    <div className="portal-detail-row">
                       <Navigation size={16} className="detail-icon" />
                       <span>{branch.bts}</span>
                     </div>
@@ -127,14 +139,27 @@ export const LandingPortal: React.FC<LandingPortalProps> = ({ onSelectBranch }) 
 
                   {/* Card Actions */}
                   <div className="portal-card-actions" onClick={e => e.stopPropagation()}>
-                    <button
-                      type="button"
-                      className="btn btn-primary portal-enter-btn"
-                      onClick={() => onSelectBranch(branch)}
-                    >
-                      <span>{t('book_this_branch')}</span>
-                      <ArrowRight size={18} />
-                    </button>
+                    {branch.isComingSoon ? (
+                      <a
+                        href={branch.whatsappUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="btn btn-primary portal-enter-btn portal-coming-soon-btn"
+                        style={{ background: 'linear-gradient(135deg, #10b981 0%, #059669 100%)', color: '#fff', border: 'none' }}
+                      >
+                        <MessageCircle size={18} />
+                        <span>VIP Pre-Opening Inquiries</span>
+                      </a>
+                    ) : (
+                      <button
+                        type="button"
+                        className="btn btn-primary portal-enter-btn"
+                        onClick={() => onSelectBranch(branch)}
+                      >
+                        <span>{t('book_this_branch')}</span>
+                        <ArrowRight size={18} />
+                      </button>
+                    )}
 
                     <div className="portal-secondary-links">
                       <a
@@ -148,21 +173,23 @@ export const LandingPortal: React.FC<LandingPortalProps> = ({ onSelectBranch }) 
                         <span>{t('nav_whatsapp')}</span>
                       </a>
 
-                      <a
-                        href={branch.googleMapsUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="portal-link-btn portal-map-btn"
-                        title="Google Maps Directions"
-                      >
-                        <Navigation size={16} />
-                        <span>{t('get_directions')}</span>
-                      </a>
+                      {!branch.isComingSoon && (
+                        <a
+                          href={branch.googleMapsUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="portal-link-btn portal-map-btn"
+                          title="Google Maps Directions"
+                        >
+                          <Navigation size={16} />
+                          <span>{t('get_directions')}</span>
+                        </a>
+                      )}
 
                       <a
                         href={`tel:${branch.phoneRaw}`}
                         className="portal-link-btn portal-phone-btn"
-                        title="Direct Call"
+                        title={`Call ${branch.phone}`}
                       >
                         <Phone size={16} />
                         <span>{t('dock_call')}</span>

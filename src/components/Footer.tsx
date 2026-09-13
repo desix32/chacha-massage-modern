@@ -72,12 +72,16 @@ export const Footer: React.FC<FooterProps> = ({ onSelectBranch, onOpenBooking })
             <h4 className="footer-col-title">Hours & Contact</h4>
             <div className="footer-contact-info">
               <p><strong>Open Daily:</strong> 9:00 AM – Midnight</p>
-              <p>
-                <strong>Central Phone:</strong><br />
-                <a href="tel:+66804530982" style={{ display: 'inline-flex', alignItems: 'center', gap: '6px' }}>
-                  <Phone size={13} /> +66 80 453 0982
-                </a>
-              </p>
+              <div style={{ margin: '8px 0 12px 0', fontSize: '0.82rem', lineHeight: '1.6' }}>
+                <strong style={{ color: '#d4af37', display: 'flex', alignItems: 'center', gap: '5px', marginBottom: '4px' }}>
+                  <Phone size={13} /> Direct Branch Lines:
+                </strong>
+                <div>• Soi 13: <a href="tel:+66804530982" style={{ color: '#cbd5e1' }}>080 453 0982</a></div>
+                <div>• Soi 11: <a href="tel:+6620825468" style={{ color: '#cbd5e1' }}>02 082 5468</a> / <a href="tel:+66928285468" style={{ color: '#cbd5e1' }}>092 828 5468</a></div>
+                <div>• Ambassador: <a href="tel:+6622558499" style={{ color: '#cbd5e1' }}>02 255 8499</a></div>
+                <div>• Soi 15: <a href="tel:+6620017659" style={{ color: '#cbd5e1' }}>02 001 7659</a> / <a href="tel:+66816965982" style={{ color: '#cbd5e1' }}>081 696 5982</a></div>
+                <div>• Asoke (21): <a href="tel:+6621204061" style={{ color: '#cbd5e1' }}>02 120 4061</a></div>
+              </div>
               <a
                 href="https://wa.me/66804530982?text=Hello%20Chacha%20Massage,%20I%20would%20like%20to%20inquire%20about%20a%20booking."
                 target="_blank"
