@@ -101,7 +101,7 @@ export const UI_TRANSLATIONS: Record<SupportedLanguage, UIStrings> = {
     hero_desc: "Escape Bangkok’s bustling energy. Experience authentic Royal Thai acupressure, restorative herbal heat therapies, and customized botanical oil treatments in our tranquil private sanctuaries.",
     hero_change_branch: "Change Branch ▾",
     hero_cta: "Book Your Sanctuary Session",
-    hero_open_daily: "Open Daily 10:00 AM – Midnight",
+    hero_open_daily: "Open Daily 9:00 AM – Midnight",
 
     trust_licensed: "Licensed Master Therapists",
     trust_hygiene: "Sanitized Private Suites",
@@ -176,7 +176,7 @@ export const UI_TRANSLATIONS: Record<SupportedLanguage, UIStrings> = {
     hero_desc: "หลีกหนีความวุ่นวายใจกลางกรุงเทพฯ สัมผัสประสบการณ์นวดแผนไทยราชสำนัก ประคบสมุนไพรร้อน และนวดน้ำมันหอมระเหยในห้องส่วนตัวอันเงียบสงบ",
     hero_change_branch: "เปลี่ยนสาขา ▾",
     hero_cta: "จองช่วงเวลาผ่อนคลายของคุณ",
-    hero_open_daily: "เปิดบริการทุกวัน 10:00 - 24:00 น. (เที่ยงคืน)",
+    hero_open_daily: "เปิดบริการทุกวัน 9:00 - 24:00 น. (เที่ยงคืน)",
 
     trust_licensed: "หมอนวดมืออาชีพมีใบประกอบวิชาชีพ",
     trust_hygiene: "ห้องส่วนตัวสะอาดและฆ่าเชื้อทุกครั้ง",
@@ -251,7 +251,7 @@ export const UI_TRANSLATIONS: Record<SupportedLanguage, UIStrings> = {
     hero_desc: "バンコクの喧騒を忘れ、静寂なプライベート空間へ。熟練セラピストによる伝統タイ古式、温かい薬草ハーブボール、贅沢なアロマオイルで深いリラクゼーションをお届けします。",
     hero_change_branch: "店舗を変更 ▾",
     hero_cta: "今すぐ癒やしの時間を予約",
-    hero_open_daily: "年中無休 10:00〜深夜24:00",
+    hero_open_daily: "年中無休 9:00〜深夜24:00",
 
     trust_licensed: "国家資格・熟練セラピスト在籍",
     trust_hygiene: "完全消毒・静かな個室完備",
@@ -326,7 +326,7 @@ export const UI_TRANSLATIONS: Record<SupportedLanguage, UIStrings> = {
     hero_desc: "远离曼谷都市喧嚣，在宁静典雅的独立包厢中，尊享正宗泰式穴位拉伸、热蒸草药球以及纯天然植物精油水疗护理。",
     hero_change_branch: "切换分店 ▾",
     hero_cta: "预约您的身心水疗体验",
-    hero_open_daily: "每日营业 10:00 - 午夜24:00",
+    hero_open_daily: "每日营业 9:00 - 午夜24:00",
 
     trust_licensed: "持证资深技师团队",
     trust_hygiene: "严格消毒独立私密包厢",
@@ -401,7 +401,7 @@ export const UI_TRANSLATIONS: Record<SupportedLanguage, UIStrings> = {
     hero_desc: "방콕 도심의 활기 속에서 만나는 고요한 안식처. 정통 타이 지압, 따뜻한 천연 허브볼 요법, 맞춤형 아로마 오일 테라피로 지친 몸을 편안하게 회복하세요.",
     hero_change_branch: "지점 변경 ▾",
     hero_cta: "지금 스파 세션 예약하기",
-    hero_open_daily: "매일 영업: 오전 10:00 - 자정 24:00",
+    hero_open_daily: "매일 영업: 오전 9:00 - 자정 24:00",
 
     trust_licensed: "공인 자격증 보유 마스터 테라피스트",
     trust_hygiene: "완벽 살균 프라이빗 룸",
@@ -476,7 +476,7 @@ export const UI_TRANSLATIONS: Record<SupportedLanguage, UIStrings> = {
     hero_desc: "बैंकाक की भागदौड़ से दूर, हमारे शांत निजी कक्षों में प्रामाणिक थाई एक्यूप्रेशर, हर्बल हीट थेरेपी और सुगंधित तेल मालिश का आनंद लें।",
     hero_change_branch: "शाखा बदलें ▾",
     hero_cta: "अपना सत्र बुक करें",
-    hero_open_daily: "प्रतिदिन सुबह 10:00 से मध्यरात्रि 12:00 बजे तक",
+    hero_open_daily: "प्रतिदिन सुबह 9:00 से मध्यरात्रि 12:00 बजे तक",
 
     trust_licensed: "प्रमाणित मास्टर थेरेपिस्ट",
     trust_hygiene: "स्वच्छ व सुरक्षित निजी कमरे",
@@ -551,7 +551,7 @@ export const UI_TRANSLATIONS: Record<SupportedLanguage, UIStrings> = {
     hero_desc: "பாங்காக் நகரின் பரபரப்பில் இருந்து விலகி, எங்கள் அமைதியான தனி அறைகளில் பாரம்பரிய தாய் மசாஜ் மற்றும் மூலிகை எண்ணெய் சிகிச்சைகளை அனுபவியுங்கள்.",
     hero_change_branch: "கிளையை மாற்றவும் ▾",
     hero_cta: "மசாஜ் முன்பதிவு செய்யவும்",
-    hero_open_daily: "தினமும் காலை 10:00 முதல் நள்ளிரவு 12:00 வரை",
+    hero_open_daily: "தினமும் காலை 9:00 முதல் நள்ளிரவு 12:00 வரை",
 
     trust_licensed: "அங்கீகரிக்கப்பட்ட நிபுணர்கள்",
     trust_hygiene: "சுத்தமான தனி அறைகள்",
@@ -626,7 +626,7 @@ export const UI_TRANSLATIONS: Record<SupportedLanguage, UIStrings> = {
     hero_desc: "اهرب من صخب بانكوك إلى ملاذنا الهادئ. تمتع بالمساج التايلاندي الملكي الأصيل، والعلاج بالكمادات العشبية الساخنة والزيوت الطبيعية في أجنحة خاصة وفائقة الخصوصية.",
     hero_change_branch: "تغيير الفرع ▾",
     hero_cta: "احجز جلستك المهدئة الآن",
-    hero_open_daily: "مفتوح يومياً من 10:00 صباحاً حتى منتصف الليل",
+    hero_open_daily: "مفتوح يومياً من 9:00 صباحاً حتى منتصف الليل",
 
     trust_licensed: "أخصائيون محترفون ومرخصون",
     trust_hygiene: "أجنحة خاصة ومعقمة بالكامل",
@@ -701,7 +701,7 @@ export const UI_TRANSLATIONS: Record<SupportedLanguage, UIStrings> = {
     hero_desc: "Отдохните от ритма Бангкока в нашем тихом спа-оазисе. Аутентичный королевский тайский массаж, горячие травяные компрессы и натуральные аромамасла в уютных приватных комнатах.",
     hero_change_branch: "Выбрать салон ▾",
     hero_cta: "Записаться на массаж",
-    hero_open_daily: "Ежедневно с 10:00 до полуночи",
+    hero_open_daily: "Ежедневно с 9:00 до полуночи",
 
     trust_licensed: "Сертифицированные мастера",
     trust_hygiene: "Стерильные приватные комнаты",
@@ -776,7 +776,7 @@ export const UI_TRANSLATIONS: Record<SupportedLanguage, UIStrings> = {
     hero_desc: "Entfliehen Sie dem Trubel Bangkoks in unseren ruhigen Privaträumen. Erleben Sie authentische traditionelle Thai-Massage, wärmende Kräuterstempel und hochwertige Aromaöle.",
     hero_change_branch: "Filiale wechseln ▾",
     hero_cta: "Jetzt Wellness-Termin buchen",
-    hero_open_daily: "Täglich geöffnet von 10:00 bis Mitternacht",
+    hero_open_daily: "Täglich geöffnet von 9:00 bis Mitternacht",
 
     trust_licensed: "Zertifizierte Meister-Therapeuten",
     trust_hygiene: "Desinfizierte Privaträume",
@@ -851,7 +851,7 @@ export const UI_TRANSLATIONS: Record<SupportedLanguage, UIStrings> = {
     hero_desc: "Échappez à l'effervescence de Bangkok dans nos suites privées et paisibles. Découvrez le massage thaï royal, les pochons d'herbes chaudes et les huiles aromatiques bienfaisantes.",
     hero_change_branch: "Changer de salon ▾",
     hero_cta: "Réserver votre séance bien-être",
-    hero_open_daily: "Ouvert tous les jours de 10h00 à minuit",
+    hero_open_daily: "Ouvert tous les jours de 9h00 à minuit",
 
     trust_licensed: "Thérapeutes diplômés d'État",
     trust_hygiene: "Suites privées et stérilisées",

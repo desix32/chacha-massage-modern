@@ -71,7 +71,7 @@ export const Footer: React.FC<FooterProps> = ({ onSelectBranch, onOpenBooking })
           <div className="footer-col">
             <h4 className="footer-col-title">Hours & Contact</h4>
             <div className="footer-contact-info">
-              <p><strong>Open Daily:</strong> 10:00 AM – Midnight</p>
+              <p><strong>Open Daily:</strong> 9:00 AM – Midnight</p>
               <p>
                 <strong>Central Phone:</strong><br />
                 <a href="tel:+66804530982" style={{ display: 'inline-flex', alignItems: 'center', gap: '6px' }}>
