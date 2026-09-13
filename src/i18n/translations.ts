@@ -122,7 +122,7 @@ export const UI_TRANSLATIONS: Record<SupportedLanguage, UIStrings> = {
     view_details: "Treatment Details",
     benefits_title: "Key Therapeutic Benefits:",
 
-    branches_title: "Four Tranquil Sanctuaries in Sukhumvit",
+    branches_title: "Five Tranquil Sanctuaries in Sukhumvit",
     branches_subtitle: "Find your nearest sanctuary along the Sukhumvit corridor. Each branch features serene private suites, certified master therapists, and authentic herbal hospitality.",
     address_label: "ADDRESS:",
     nearest_station: "NEAREST STATION:",
@@ -197,7 +197,7 @@ export const UI_TRANSLATIONS: Record<SupportedLanguage, UIStrings> = {
     view_details: "รายละเอียดการนวด",
     benefits_title: "ประโยชน์ต่อสุขภาพ:",
 
-    branches_title: "4 สาขาใจกลางสุขุมวิท พร้อมต้อนรับคุณ",
+    branches_title: "5 สาขาใจกลางสุขุมวิท พร้อมต้อนรับคุณ",
     branches_subtitle: "เลือกสาขาที่สะดวกที่สุดบนถนนสุขุมวิท แต่ละสาขาพร้อมห้องนวดส่วนตัว หมอนวดผู้เชี่ยวชาญ และการต้อนรับอย่างอบอุ่น",
     address_label: "ที่อยู่:",
     nearest_station: "สถานีรถไฟฟ้าใกล้เคียง:",
@@ -272,7 +272,7 @@ export const UI_TRANSLATIONS: Record<SupportedLanguage, UIStrings> = {
     view_details: "コース詳細",
     benefits_title: "主な効果・効能:",
 
-    branches_title: "スクンビット通り沿い 4つの癒やしの隠れ家",
+    branches_title: "スクンビット通り沿い 5つの癒やしの隠れ家",
     branches_subtitle: "ナナ〜アソークの便利な立地。全店舗に落ち着いたプライベート個室、熟練セラピスト、伝統のおもてなしを備えています。",
     address_label: "住所:",
     nearest_station: "最寄り駅:",
@@ -347,7 +347,7 @@ export const UI_TRANSLATIONS: Record<SupportedLanguage, UIStrings> = {
     view_details: "疗程详情",
     benefits_title: "主要疗效：",
 
-    branches_title: "曼谷素坤逸核心区 4大宁静水疗分店",
+    branches_title: "曼谷素坤逸核心区 5大宁静水疗分店",
     branches_subtitle: "无论您下榻何处，都能轻松抵达。所有分店均配备高品质独立私房、专业技师与传统香草养生茶点。",
     address_label: "地址:",
     nearest_station: "邻近轻轨/地铁:",
@@ -422,7 +422,7 @@ export const UI_TRANSLATIONS: Record<SupportedLanguage, UIStrings> = {
     view_details: "상세 정보",
     benefits_title: "주요 건강 효능:",
 
-    branches_title: "수쿰빗 중심가 4개 지점",
+    branches_title: "수쿰빗 중심가 5개 지점",
     branches_subtitle: "수쿰빗 어디서나 가까운 지점을 방문하세요. 아늑한 개인 룸과 전문 테라피스트가 따뜻한 환대로 맞이합니다.",
     address_label: "주소:",
     nearest_station: "가까운 역:",
@@ -497,7 +497,7 @@ export const UI_TRANSLATIONS: Record<SupportedLanguage, UIStrings> = {
     view_details: "विवरण देखें",
     benefits_title: "मुख्य स्वास्थ्य लाभ:",
 
-    branches_title: "सुखुमवित में 4 शांत व आरामदायक शाखाएं",
+    branches_title: "सुखुमवित में 5 शांत व आरामदायक शाखाएं",
     branches_subtitle: "सुखुमवित में अपनी निकटतम शाखा चुनें। हर शाखा में निजी कक्ष, प्रशिक्षित थेरेपिस्ट और गर्मजोशी भरा स्वागत उपलब्ध है।",
     address_label: "पता:",
     nearest_station: "निकटतम स्टेशन:",
@@ -572,7 +572,7 @@ export const UI_TRANSLATIONS: Record<SupportedLanguage, UIStrings> = {
     view_details: "விவரங்கள்",
     benefits_title: "முக்கிய நன்மைகள்:",
 
-    branches_title: "சுகும்விட்டில் 4 கிளைகள்",
+    branches_title: "சுகும்விட்டில் 5 கிளைகள்",
     branches_subtitle: "சுகும்விட் பகுதியில் உள்ள உங்களுக்கு அருகிலுள்ள கிளையை தேர்வு செய்யுங்கள்.",
     address_label: "முகவரி:",
     nearest_station: "அருகிலுள்ள நிலையம்:",
@@ -647,7 +647,7 @@ export const UI_TRANSLATIONS: Record<SupportedLanguage, UIStrings> = {
     view_details: "تفاصيل الجلسة",
     benefits_title: "الفوائد العلاجية:",
 
-    branches_title: "4 فروع هادئة وفاخرة في سوخومفيت",
+    branches_title: "5 فروع هادئة وفاخرة في سوخومفيت",
     branches_subtitle: "فروعنا قريبة منك في شارع سوخومفيت ونانا. تشتمل على غرف خاصة فاخرة، معالجين خبراء وحسن ضيافة تايلاندية.",
     address_label: "العنوان:",
     nearest_station: "أقرب محطة قطار:",
@@ -722,7 +722,7 @@ export const UI_TRANSLATIONS: Record<SupportedLanguage, UIStrings> = {
     view_details: "Подробнее",
     benefits_title: "Польза для здоровья:",
 
-    branches_title: "4 уютных салона в районе Сукхумвит",
+    branches_title: "5 уютных салонов в районе Сукхумвит",
     branches_subtitle: "Выберите ближайший к вам салон вдоль Сукхумвита. Каждый салон оснащен комфортабельными отдельными комнатами и предлагает высочайший уровень сервиса.",
     address_label: "АДРЕС:",
     nearest_station: "БЛИЖАЙШЕЕ МЕТРО:",
@@ -797,7 +797,7 @@ export const UI_TRANSLATIONS: Record<SupportedLanguage, UIStrings> = {
     view_details: "Details ansehen",
     benefits_title: "Wirkung und Vorteile:",
 
-    branches_title: "4 Wohlfühl-Oasen im Herzen von Sukhumvit",
+    branches_title: "5 Wohlfühl-Oasen im Herzen von Sukhumvit",
     branches_subtitle: "Wählen Sie Ihren Wunschstandort in Bangkok. Alle Filialen bieten private Räume und traditionelle thailändische Gastfreundschaft.",
     address_label: "ADRESSE:",
     nearest_station: "NÄCHSTE BTS/MRT:",
@@ -872,7 +872,7 @@ export const UI_TRANSLATIONS: Record<SupportedLanguage, UIStrings> = {
     view_details: "Détails du soin",
     benefits_title: "Bienfaits thérapeutiques :",
 
-    branches_title: "4 Havres de Paix à Sukhumvit",
+    branches_title: "5 Havres de Paix à Sukhumvit",
     branches_subtitle: "Trouvez le salon le plus proche de votre hôtel. Chacun offre des cabines privées climatisées et un accueil chaleureux.",
     address_label: "ADRESSE :",
     nearest_station: "STATION LA PLUS PROCHE :",

@@ -23,7 +23,7 @@ export const Footer: React.FC<FooterProps> = ({ onSelectBranch, onOpenBooking })
             </div>
             <p className="footer-about">
               Dedicated to authentic Thai healing arts, certified masseuses, and pure organic botanicals. 
-              Escape urban tension in 4 serene central Sukhumvit sanctuaries.
+              Escape urban tension in 5 serene central Sukhumvit sanctuaries.
             </p>
             <div className="footer-cta-row">
               <button type="button" className="btn btn-primary footer-book-btn" onClick={onOpenBooking}>
@@ -35,7 +35,7 @@ export const Footer: React.FC<FooterProps> = ({ onSelectBranch, onOpenBooking })
 
           {/* Locations */}
           <div className="footer-col">
-            <h4 className="footer-col-title">Our 4 Sanctuaries</h4>
+            <h4 className="footer-col-title">Our 5 Sanctuaries</h4>
             <ul className="footer-links-list">
               {BRANCHES.map(branch => (
                 <li key={branch.id}>

@@ -180,7 +180,7 @@ export const LandingPortal: React.FC<LandingPortalProps> = ({ onSelectBranch }) 
       <footer className="portal-footer">
         <div className="container text-center">
           <p className="portal-footer-tag">
-            CHACHA MASSAGE BANGKOK • 4 SANCTUARIES ALONG SUKHUMVIT
+            CHACHA MASSAGE BANGKOK • 5 SANCTUARIES ALONG SUKHUMVIT
           </p>
           <p className="portal-footer-copy">
             © 2002 – 2026 Chacha Massage. All rights reserved. Master Licensed Practitioners.
