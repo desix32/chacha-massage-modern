@@ -2,6 +2,7 @@ import React from 'react';
 import { MapPin, Clock, Phone, Navigation, MessageCircle, CheckCircle2 } from 'lucide-react';
 import { BRANCHES } from '../data/branches';
 import type { Branch } from '../data/branches';
+import { useLanguage } from '../context/LanguageContext';
 import './BranchPicker.css';
 
 interface BranchPickerProps {
@@ -15,15 +16,16 @@ export const BranchPicker: React.FC<BranchPickerProps> = ({
   onSelectBranch,
   onBookNow
 }) => {
+  const { t } = useLanguage();
+
   return (
     <section className="branches-section" id="branches">
       <div className="container">
         <div className="text-center">
-          <div className="section-tag">Prime Bangkok Locations</div>
-          <h2 className="section-title">4 Convenient Sukhumvit Sanctuaries</h2>
+          <div className="section-tag">{t('nav_locations')}</div>
+          <h2 className="section-title">{t('branches_title')}</h2>
           <p className="section-subtitle center-sub">
-            All branches are steps from BTS Skytrain stations, offering serene air-conditioned private 
-            rooms, professional certified masseuses, and herbal amenities.
+            {t('branches_subtitle')}
           </p>
         </div>
 
@@ -44,7 +46,7 @@ export const BranchPicker: React.FC<BranchPickerProps> = ({
                   {isSelected && (
                     <div className="active-badge">
                       <CheckCircle2 size={16} />
-                      <span>Current Selection</span>
+                      <span>{t('selected_badge')}</span>
                     </div>
                   )}
                 </div>
@@ -61,7 +63,7 @@ export const BranchPicker: React.FC<BranchPickerProps> = ({
                     <div className="branch-detail-item">
                       <MapPin size={16} className="detail-icon" />
                       <div>
-                        <strong>Address:</strong>
+                        <strong>{t('address_label')}:</strong>
                         <span>{branch.address}</span>
                       </div>
                     </div>
@@ -69,7 +71,7 @@ export const BranchPicker: React.FC<BranchPickerProps> = ({
                     <div className="branch-detail-item">
                       <Navigation size={16} className="detail-icon" />
                       <div>
-                        <strong>Nearest Station:</strong>
+                        <strong>{t('nearest_station')}:</strong>
                         <span className="bts-highlight">{branch.bts}</span>
                       </div>
                     </div>
@@ -77,7 +79,7 @@ export const BranchPicker: React.FC<BranchPickerProps> = ({
                     <div className="branch-detail-item">
                       <Clock size={16} className="detail-icon" />
                       <div>
-                        <strong>Opening Hours:</strong>
+                        <strong>{t('opening_hours')}:</strong>
                         <span>{branch.hours}</span>
                       </div>
                     </div>
@@ -85,7 +87,7 @@ export const BranchPicker: React.FC<BranchPickerProps> = ({
                     <div className="branch-detail-item">
                       <Phone size={16} className="detail-icon" />
                       <div>
-                        <strong>Direct Phone:</strong>
+                        <strong>{t('direct_phone')}:</strong>
                         <a href={`tel:${branch.phoneRaw}`} onClick={e => e.stopPropagation()}>
                           {branch.phone}
                         </a>
@@ -102,7 +104,7 @@ export const BranchPicker: React.FC<BranchPickerProps> = ({
                         onBookNow();
                       }}
                     >
-                      {isSelected ? 'Book This Branch' : 'Select & Book'}
+                      {isSelected ? t('book_this_branch') : t('book_this_branch')}
                     </button>
 
                     <a
@@ -113,7 +115,7 @@ export const BranchPicker: React.FC<BranchPickerProps> = ({
                       title="Chat on WhatsApp"
                     >
                       <MessageCircle size={18} />
-                      <span>WhatsApp</span>
+                      <span>{t('nav_whatsapp')}</span>
                     </a>
 
                     <a
@@ -124,7 +126,7 @@ export const BranchPicker: React.FC<BranchPickerProps> = ({
                       title="Open Google Maps"
                     >
                       <Navigation size={18} />
-                      <span>Map</span>
+                      <span>{t('get_directions')}</span>
                     </a>
                   </div>
                 </div>

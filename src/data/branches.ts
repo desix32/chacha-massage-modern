@@ -80,7 +80,7 @@ export const BRANCHES: Branch[] = [
     phoneRaw: "+66804530982",
     whatsapp: "+66804530982",
     whatsappUrl: "https://wa.me/66804530982?text=Hello%20Chacha%20Massage%20Soi%2013,%20I%20would%20like%20to%20inquire%20about%20booking%20a%20session.",
-    hours: "10:30 AM – 11:00 PM Daily",
+    hours: "9:00 AM – 1:00 AM Daily",
     googleMapsUrl: "https://maps.google.com/?q=Sukhumvit+Soi+13+Bangkok",
     image: "./images/soi13-interior.jpg",
     interiorImages: ["./images/soi13-interior.jpg", "./images/gallery-3.jpg", "./images/gallery-4.jpg"]

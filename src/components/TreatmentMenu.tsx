@@ -3,6 +3,7 @@ import { Clock, Sparkles, Check, MessageCircle } from 'lucide-react';
 import { TREATMENTS } from '../data/treatments';
 import type { Treatment } from '../data/treatments';
 import type { Branch } from '../data/branches';
+import { useLanguage } from '../context/LanguageContext';
 import './TreatmentMenu.css';
 
 interface TreatmentMenuProps {
@@ -11,6 +12,7 @@ interface TreatmentMenuProps {
 }
 
 export const TreatmentMenu: React.FC<TreatmentMenuProps> = ({ activeBranch, onSelectTreatment }) => {
+  const { t, getTreatmentInfo } = useLanguage();
   const [activeCategory, setActiveCategory] = useState<string>('all');
   // Store selected duration index per treatment: { [treatmentId]: minutes }
   const [selectedDurations, setSelectedDurations] = useState<{ [id: string]: number }>(() => {
@@ -24,11 +26,11 @@ export const TreatmentMenu: React.FC<TreatmentMenuProps> = ({ activeBranch, onSe
   });
 
   const categories = [
-    { id: 'all', label: 'All Therapies' },
-    { id: 'massage', label: 'Thai & Reflexology' },
-    { id: 'oil', label: 'Aroma & Deep Oil' },
-    { id: 'specialty', label: 'Herbal & Relief' },
-    { id: 'packages', label: 'Spa Packages' }
+    { id: 'all', label: t('cat_all') },
+    { id: 'massage', label: t('cat_massage') },
+    { id: 'oil', label: t('cat_oil') },
+    { id: 'specialty', label: t('cat_specialty') },
+    { id: 'packages', label: t('cat_packages') }
   ];
 
   const filteredTreatments = activeCategory === 'all' 
@@ -44,7 +46,7 @@ export const TreatmentMenu: React.FC<TreatmentMenuProps> = ({ activeBranch, onSe
       <div className="container">
         {/* Header */}
         <div className="text-center">
-          <div className="section-tag">Therapeutic Offerings</div>
+          <div className="section-tag">{t('nav_treatments')}</div>
           <h2 className="section-title">Authentic Therapies & Transparent Pricing</h2>
           <p className="section-subtitle center-sub">
             Tailored pressure, licensed master therapists, and pure botanical balms. 
@@ -70,25 +72,26 @@ export const TreatmentMenu: React.FC<TreatmentMenuProps> = ({ activeBranch, onSe
 
         {/* Treatments Grid */}
         <div className="treatments-grid">
-          {filteredTreatments.map(t => {
-            const currentMinutes = selectedDurations[t.id] || t.durations[0].minutes;
-            const currentDurationObj = t.durations.find(d => d.minutes === currentMinutes) || t.durations[0];
+          {filteredTreatments.map(tItem => {
+            const currentMinutes = selectedDurations[tItem.id] || tItem.durations[0].minutes;
+            const currentDurationObj = tItem.durations.find(d => d.minutes === currentMinutes) || tItem.durations[0];
+            const trans = getTreatmentInfo(tItem.id, tItem.name, tItem.shortDescription, tItem.tag);
 
             return (
-              <article className="treatment-card" key={t.id}>
+              <article className="treatment-card" key={tItem.id}>
                 {/* Image & Badge */}
                 <div className="treatment-img-wrap">
-                  <img src={t.image} alt={t.name} className="treatment-img" loading="lazy" />
-                  {t.tag && <span className="treatment-badge">{t.tag}</span>}
+                  <img src={tItem.image} alt={trans.name} className="treatment-img" loading="lazy" />
+                  {trans.tag && <span className="treatment-badge">{trans.tag}</span>}
                 </div>
 
                 <div className="treatment-body">
-                  <h3 className="treatment-name">{t.name}</h3>
-                  <p className="treatment-desc">{t.shortDescription}</p>
+                  <h3 className="treatment-name">{trans.name}</h3>
+                  <p className="treatment-desc">{trans.shortDescription}</p>
 
                   {/* Benefits checklist */}
                   <ul className="treatment-benefits">
-                    {t.benefits.map((b, i) => (
+                    {tItem.benefits.map((b, i) => (
                       <li key={i}>
                         <Check size={14} className="check-icon" />
                         <span>{b}</span>
@@ -98,17 +101,17 @@ export const TreatmentMenu: React.FC<TreatmentMenuProps> = ({ activeBranch, onSe
 
                   {/* Duration Toggle Matrix */}
                   <div className="duration-matrix">
-                    <span className="duration-label">Select Session Duration:</span>
+                    <span className="duration-label">{t('select_duration')}</span>
                     <div className="duration-pills">
-                      {t.durations.map(dur => (
+                      {tItem.durations.map(dur => (
                         <button
                           key={dur.minutes}
                           type="button"
                           className={`duration-pill ${dur.minutes === currentMinutes ? 'active' : ''}`}
-                          onClick={() => handleDurationChange(t.id, dur.minutes)}
+                          onClick={() => handleDurationChange(tItem.id, dur.minutes)}
                         >
                           <Clock size={13} />
-                          <span>{dur.minutes} Min</span>
+                          <span>{dur.minutes} {t('mins')}</span>
                           {dur.popular && <span className="pill-star">★</span>}
                         </button>
                       ))}
@@ -118,21 +121,21 @@ export const TreatmentMenu: React.FC<TreatmentMenuProps> = ({ activeBranch, onSe
                   {/* Pricing and Action Footer */}
                   <div className="treatment-footer">
                     <div className="price-display">
-                      <span className="price-label">Price for {currentMinutes} mins:</span>
+                      <span className="price-label">{t('price_for')} {currentMinutes} {t('mins')}:</span>
                       <div className="price-amount">
                         <span className="currency">THB</span>
                         <span className="number">{currentDurationObj.priceTHB.toLocaleString()}</span>
-                        <span className="vat-note">Net / No Hidden Fees</span>
+                        <span className="vat-note">{t('net_fees')}</span>
                       </div>
                     </div>
 
                     <button
                       type="button"
                       className="btn btn-primary book-treatment-btn"
-                      onClick={() => onSelectTreatment(t, currentMinutes, currentDurationObj.priceTHB)}
+                      onClick={() => onSelectTreatment(tItem, currentMinutes, currentDurationObj.priceTHB)}
                     >
                       <Sparkles size={16} />
-                      <span>Book Session</span>
+                      <span>{t('book_session')}</span>
                     </button>
                   </div>
                 </div>

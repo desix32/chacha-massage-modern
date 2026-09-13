@@ -21,113 +21,177 @@ export const TREATMENTS: Treatment[] = [
     id: "thai-traditional",
     name: "Traditional Royal Thai Massage",
     category: "massage",
-    shortDescription: "Ancient rhythmic acupressure & passive yogic stretching to restore energetic balance.",
-    fullDescription: "An ancient healing art passed down through generations. Our licensed therapists apply targeted palm pressure, thumb kneading, and gentle yogic stretches along energy lines (Sen) to eliminate stiffness, improve flexibility, and awaken full-body vitality.",
-    benefits: ["Relieves deep muscle tension", "Increases joint mobility", "Boosts circulation & lymphatic drainage"],
+    shortDescription: "Ancient rhythmic acupressure & passive yogic stretching along energy lines (Sen) to restore vitality.",
+    fullDescription: "An authentic healing art passed down through generations. Master therapists apply targeted palm pressure, thumb kneading, and gentle assisted yogic stretches along energetic pathways to relieve stiffness, improve flexibility, and rebalance the body.",
+    benefits: ["Relieves deep muscle tension & stiffness", "Improves posture & joint flexibility", "Stimulates lymphatic & blood circulation"],
     durations: [
-      { minutes: 60, priceTHB: 450 },
-      { minutes: 90, priceTHB: 650, popular: true },
-      { minutes: 120, priceTHB: 850 }
+      { minutes: 60, priceTHB: 400 },
+      { minutes: 90, priceTHB: 600, popular: true },
+      { minutes: 120, priceTHB: 650 }
     ],
     image: "./images/photoshoot/thai-stretch-back.jpg",
-    tag: "Most Popular"
-  },
-  {
-    id: "deep-tissue-oil",
-    name: "Deep Tissue Aroma Oil Massage",
-    category: "oil",
-    shortDescription: "Therapeutic warm botanical oils with focused pressure on stubborn knots and trigger points.",
-    fullDescription: "Reaches the deepest layers of muscle fibers and connective tissue. Using warm essential botanicals, therapists use elbows, forearms, and deep friction strokes to dissolve chronic shoulder knots and lower back fatigue.",
-    benefits: ["Dissolves chronic postural knots", "Releases deep tension", "Restores restorative sleep"],
-    durations: [
-      { minutes: 60, priceTHB: 600 },
-      { minutes: 90, priceTHB: 850, popular: true },
-      { minutes: 120, priceTHB: 1100 }
-    ],
-    image: "./images/service-oil.jpg",
     tag: "Signature"
   },
   {
     id: "foot-reflexology",
     name: "Revitalizing Foot Reflexology",
     category: "massage",
-    shortDescription: "Targeted pressure point stimulation along the soles and calves for full-body relief.",
-    fullDescription: "Essential relief for city explorers and busy travelers. Begins with a soothing herbal foot wash, followed by precise thumb and reflexology stick stimulation on meridian zones corresponding to the body's internal organs.",
-    benefits: ["Instant relief for tired legs & feet", "Stimulates internal organ wellness", "Reduces ankle swelling"],
+    shortDescription: "Targeted reflex zone stimulation along the soles and calves for full-body relief.",
+    fullDescription: "Essential soothing care for tired feet and active city explorers. Begins with a cleansing herbal foot wash, followed by precise thumb acupressure and reflexology stick stimulation along meridian points corresponding to internal organs.",
+    benefits: ["Instant relief for fatigued feet & calves", "Improves circulation & reduces ankle swelling", "Promotes natural systemic relaxation"],
     durations: [
-      { minutes: 60, priceTHB: 400 },
-      { minutes: 90, priceTHB: 580, popular: true },
-      { minutes: 120, priceTHB: 750 }
+      { minutes: 60, priceTHB: 350 },
+      { minutes: 90, priceTHB: 550, popular: true },
+      { minutes: 120, priceTHB: 600 }
     ],
     image: "./images/service-foot.jpg",
     tag: "Best Value"
   },
   {
-    id: "aromatherapy-relaxation",
-    name: "Pure Botanical Aromatherapy",
-    category: "oil",
-    shortDescription: "Gentle Swedish long strokes infused with pure organic lavender and lemongrass extracts.",
-    fullDescription: "A deeply sensory relaxation experience designed to quiet the mind. Smooth, flowing effleurage strokes combined with custom botanical oils melt away stress and leave your skin nourished and silky.",
-    benefits: ["Soothes nervous system", "Nourishes dry skin", "Promotes emotional tranquility"],
+    id: "head-shoulder-back",
+    name: "Head, Shoulder & Back Tension Relief",
+    category: "massage",
+    shortDescription: "Concentrated upper-body acupressure targeting tech-neck, migraines, and tight traps.",
+    fullDescription: "Specifically designed for travelers and desk professionals suffering from postural fatigue. Focuses intensely on the upper trapezius, cervical spine, shoulder blades, and cranial pressure points to release stubborn knots.",
+    benefits: ["Dissolves chronic neck & shoulder stiffness", "Alleviates tension headaches & eyestrain", "Restores upper-body mobility"],
     durations: [
-      { minutes: 60, priceTHB: 700 },
-      { minutes: 90, priceTHB: 950, popular: true },
-      { minutes: 120, priceTHB: 1250 }
-    ],
-    image: "./images/photoshoot/essential-oil-flower.jpg"
-  },
-  {
-    id: "hot-herbal-compress",
-    name: "Warm Thai Herbal Compress (Luk Pra Kob)",
-    category: "specialty",
-    shortDescription: "Steamed organic herbal pouches pressed into tired muscles to relieve aches and inflammation.",
-    fullDescription: "A revered traditional therapy. Steamed linen bundles filled with fresh lemongrass, plai, kaffir lime, turmeric, and camphor are pressed rhythmically along meridian lines to soothe sore muscles, ease inflammation, and boost vitality.",
-    benefits: ["Eases chronic inflammation & soreness", "Detoxifies via therapeutic perspiration", "Calming herbal aroma"],
-    durations: [
-      { minutes: 90, priceTHB: 900, popular: true },
-      { minutes: 120, priceTHB: 1200 }
-    ],
-    image: "./images/gallery-7.jpg",
-    tag: "Traditional Remedy"
-  },
-  {
-    id: "head-neck-shoulder",
-    name: "Head, Neck & Desk-Fatigue Relief",
-    category: "specialty",
-    shortDescription: "Concentrated upper-body therapy targeting tech-neck, migraines, and tight shoulders.",
-    fullDescription: "Specifically engineered for remote workers and office professionals suffering from desk fatigue. Intensely targets the traps, occipital base, scm neck muscles, and scalp.",
-    benefits: ["Eliminates tension headaches", "Corrects upper back tightness", "Restores neck mobility"],
-    durations: [
-      { minutes: 60, priceTHB: 450 },
-      { minutes: 90, priceTHB: 650, popular: true }
+      { minutes: 60, priceTHB: 400 },
+      { minutes: 90, priceTHB: 600, popular: true },
+      { minutes: 120, priceTHB: 650 }
     ],
     image: "./images/photoshoot/thai-stretch-shoulder.jpg",
     tag: "Office Relief"
   },
   {
-    id: "body-scrub-renewal",
+    id: "oil-massage",
+    name: "Therapeutic Oil Massage",
+    category: "oil",
+    shortDescription: "Deep gliding strokes with warm botanical oils targeting muscle knots and fatigue.",
+    fullDescription: "Combines the benefits of smooth Swedish massage techniques with targeted Thai acupressure. Warm essential oils nourish the skin while therapists work into deeper muscle layers to eliminate stress and fatigue.",
+    benefits: ["Dissolves stubborn muscular knots", "Nourishes and softens dry skin", "Relieves overall physical fatigue"],
+    durations: [
+      { minutes: 60, priceTHB: 550 },
+      { minutes: 90, priceTHB: 800, popular: true },
+      { minutes: 120, priceTHB: 1000 }
+    ],
+    image: "./images/service-oil.jpg",
+    tag: "Popular"
+  },
+  {
+    id: "aroma-massage",
+    name: "Pure Botanical Aroma Massage",
+    category: "oil",
+    shortDescription: "Gentle sensory relaxation infused with pure natural lavender and lemongrass extracts.",
+    fullDescription: "A luxurious and peaceful sensory retreat. Smooth, rhythmic effleurage strokes with premium organic essential oils calm the nervous system, release mental stress, and promote deep restful sleep.",
+    benefits: ["Calms the nervous system & quiets anxiety", "Promotes restorative deep sleep", "Leaves skin delicately fragrant and hydrated"],
+    durations: [
+      { minutes: 60, priceTHB: 700 },
+      { minutes: 90, priceTHB: 1000, popular: true },
+      { minutes: 120, priceTHB: 1200 }
+    ],
+    image: "./images/photoshoot/essential-oil-flower.jpg"
+  },
+  {
+    id: "coconut-oil-massage",
+    name: "Cold-Pressed Coconut Oil Massage",
+    category: "oil",
+    shortDescription: "100% virgin tropical coconut oil therapy for intense skin hydration and gentle relaxation.",
+    fullDescription: "Indulge in organic Thai cold-pressed virgin coconut oil rich in vitamins and antioxidants. Melts effortlessly into the skin with smooth continuous strokes to replenish moisture after sun exposure.",
+    benefits: ["Deep cellular hydration for sun-drenched skin", "Rich in natural antioxidants & Vitamin E", "Leaves skin with a radiant tropical glow"],
+    durations: [
+      { minutes: 60, priceTHB: 700 },
+      { minutes: 90, priceTHB: 1000, popular: true },
+      { minutes: 120, priceTHB: 1200 }
+    ],
+    image: "./images/about-wellbeing.jpg",
+    tag: "Skin Nourishing"
+  },
+  {
+    id: "lotion-massage",
+    name: "Silky Botanical Lotion Massage",
+    category: "oil",
+    shortDescription: "Smooth, non-greasy moisturizing massage with delicate botanical lotions.",
+    fullDescription: "Ideal for guests who prefer lightweight moisture without heavy oil residue. Gentle flowing techniques absorb delicate restorative lotions deeply into the epidermis, leaving you refreshed and non-sticky.",
+    benefits: ["Non-greasy, fast-absorbing hydration", "Velvety skin texture", "Soothing and refreshing"],
+    durations: [
+      { minutes: 60, priceTHB: 700 },
+      { minutes: 90, priceTHB: 1000, popular: true },
+      { minutes: 120, priceTHB: 1200 }
+    ],
+    image: "./images/photoshoot/spa-lotions-towels.jpg"
+  },
+  {
+    id: "hot-oil-massage",
+    name: "Deep Restorative Hot Oil Massage",
+    category: "oil",
+    shortDescription: "Therapeutic warm heated essential oils penetrating deep into tired muscles.",
+    fullDescription: "Warmed therapeutic oils are drizzled along tension points and massaged with deep firm pressure. Heat expands capillaries, increases oxygen delivery, and eases the most stubborn chronic tightness.",
+    benefits: ["Thermal penetration soothes chronic aches", "Accelerates muscle recovery", "Deep sensory warmth and tranquility"],
+    durations: [
+      { minutes: 60, priceTHB: 1000 },
+      { minutes: 90, priceTHB: 1300, popular: true },
+      { minutes: 120, priceTHB: 1500 }
+    ],
+    image: "./images/gallery-1.jpg",
+    tag: "Deep Heat Therapy"
+  },
+  {
+    id: "thai-hot-herbal-bag",
+    name: "Thai Hot Herbal Compress (Luk Pra Kob)",
+    category: "specialty",
+    shortDescription: "Steamed organic herbal pouches pressed into tired muscles to relieve aches and inflammation.",
+    fullDescription: "A revered centuries-old Royal therapy. Steamed cotton parcels filled with fresh plai, lemongrass, kaffir lime, turmeric, and camphor are pressed rhythmically along energy lines to dissolve muscle soreness and fatigue.",
+    benefits: ["Eases chronic inflammation & soreness", "Detoxifies via therapeutic perspiration", "Calming therapeutic herbal aroma"],
+    durations: [
+      { minutes: 60, priceTHB: 1000 },
+      { minutes: 90, priceTHB: 1200, popular: true },
+      { minutes: 120, priceTHB: 1400 }
+    ],
+    image: "./images/gallery-7.jpg",
+    tag: "Traditional Remedy"
+  },
+  {
+    id: "hot-oil-herbal-bag",
+    name: "Hot Oil & Herbal Compress Ritual",
+    category: "specialty",
+    shortDescription: "The ultimate therapeutic fusion: warm botanical oils followed by steamed herbal compresses.",
+    fullDescription: "Our most comprehensive healing specialty. Begins with deep tissue warm botanical oil therapy to release tight fibers, followed by steaming traditional Thai herbal compresses applied along meridian channels.",
+    benefits: ["Synergistic heat and herbal healing", "Dissolves deep chronic stiffness", "Total rejuvenation for mind and body"],
+    durations: [
+      { minutes: 60, priceTHB: 1000 },
+      { minutes: 90, priceTHB: 1500, popular: true },
+      { minutes: 120, priceTHB: 1800 }
+    ],
+    image: "./images/gallery-2.jpg",
+    tag: "Master Specialty"
+  },
+  {
+    id: "body-scrub",
     name: "Organic Glow Body Scrub & Polish",
     category: "specialty",
-    shortDescription: "Gentle natural exfoliation with crushed jasmine rice and coconut milk for luminous skin.",
-    fullDescription: "Gentle buffing removes dead epidermal cells while rich coconut nectar deeply hydrates. Followed by a warm rinse and finishing moisture balm application.",
-    benefits: ["Silky smooth radiant skin", "Improves cellular turnover", "Deep hydration"],
+    shortDescription: "Gentle natural exfoliation with crushed jasmine rice and botanical nectar for luminous skin.",
+    fullDescription: "Gentle buffing gently sloughs off dull dead epidermal cells while organic botanical nectar intensely hydrates. Concludes with a warm cleansing rinse and protective moisture balm.",
+    benefits: ["Instantly silky-smooth luminous skin", "Stimulates cellular turnover", "Deep hydration and skin nourishment"],
     durations: [
-      { minutes: 60, priceTHB: 800, popular: true }
+      { minutes: 60, priceTHB: 1000 },
+      { minutes: 90, priceTHB: 1300, popular: true },
+      { minutes: 120, priceTHB: 1500 }
     ],
-    image: "./images/about-wellbeing.jpg"
+    image: "./images/hero.jpg",
+    tag: "Skin Renewal"
   },
   {
     id: "zen-harmony-package",
     name: "Siam Zen Complete Harmony Package",
     category: "packages",
     shortDescription: "Our signature head-to-toe ritual: 60m Thai or Foot + 60m Warm Oil + Herbal Tea.",
-    fullDescription: "The ultimate 2-hour retreat. Combines deep tension release with soothing aromatherapy and therapeutic herbal care. Concludes with hot organic pandan tea and fresh dried fruit.",
-    benefits: ["Complete mental & physical reset", "Comprehensive whole-body care", "Complimentary herbal welcome tea"],
+    fullDescription: "The ultimate multi-therapy sanctuary retreat. Combines deep acupressure release with warm botanical oil relaxation. Concludes with complimentary organic herbal tea and seasonal refreshments.",
+    benefits: ["Complete mental & physical reset", "Head-to-toe multi-modality wellness", "Complimentary herbal welcome & tea ceremony"],
     durations: [
       { minutes: 120, priceTHB: 1250, popular: true },
       { minutes: 150, priceTHB: 1550 }
     ],
-    image: "./images/hero.jpg",
+    image: "./images/photoshoot/private-suite-bed.jpg",
     tag: "Top Rated Package"
   }
 ];

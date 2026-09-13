@@ -1,6 +1,7 @@
 import React from 'react';
 import { MessageCircle, Phone, CalendarCheck, MapPin } from 'lucide-react';
 import type { Branch } from '../data/branches';
+import { useLanguage } from '../context/LanguageContext';
 import './MobileActionDock.css';
 
 interface MobileActionDockProps {
@@ -14,12 +15,14 @@ export const MobileActionDock: React.FC<MobileActionDockProps> = ({
   onOpenBooking,
   onScrollToBranches
 }) => {
+  const { t } = useLanguage();
+
   return (
     <aside className="mobile-action-dock" aria-label="Quick mobile booking actions">
       <div className="dock-branch-indicator" onClick={onScrollToBranches}>
         <MapPin size={13} className="dock-pin-icon" />
         <span className="dock-branch-text">
-          {activeBranch.shortName} <span className="dock-switch">(tap to switch)</span>
+          {activeBranch.shortName} <span className="dock-switch">{t('dock_switch_branch')}</span>
         </span>
       </div>
 
@@ -30,7 +33,7 @@ export const MobileActionDock: React.FC<MobileActionDockProps> = ({
           aria-label={`Call ${activeBranch.name}`}
         >
           <Phone size={18} />
-          <span>Call</span>
+          <span>{t('dock_call')}</span>
         </a>
 
         <a
@@ -41,7 +44,7 @@ export const MobileActionDock: React.FC<MobileActionDockProps> = ({
           aria-label="WhatsApp quick chat"
         >
           <MessageCircle size={18} />
-          <span>WhatsApp</span>
+          <span>{t('dock_whatsapp')}</span>
         </a>
 
         <button
@@ -51,7 +54,7 @@ export const MobileActionDock: React.FC<MobileActionDockProps> = ({
           aria-label="Book a massage appointment"
         >
           <CalendarCheck size={18} />
-          <span>Book Now</span>
+          <span>{t('dock_book')}</span>
         </button>
       </div>
     </aside>

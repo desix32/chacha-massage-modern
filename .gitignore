@@ -31,7 +31,7 @@ inspect_drive.cjs
 inspect_drive_subfolders.cjs
 list_photos.cjs
 download_curated.cjs
-capture_heritage_gallery.cjs
 start_tunnel.cjs
 cf_tunnel.cjs
-
+screenshot_updated_menu.cjs
+menu_photo.jpg
