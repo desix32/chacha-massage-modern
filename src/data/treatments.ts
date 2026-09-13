@@ -212,5 +212,60 @@ export const TREATMENTS: Treatment[] = [
     ],
     image: "./images/photoshoot/private-suite-bed.jpg",
     tag: "Top Rated Package"
+  },
+  {
+    id: "office-syndrome-ritual",
+    name: "Office Syndrome Recovery Ritual",
+    category: "packages",
+    shortDescription: "Targeted upper back, neck, shoulders & cranial acupressure with warm herbal plai balm to cure screen fatigue.",
+    fullDescription: "Specifically curated for Bangkok office professionals, remote workers, and expats suffering from prolonged sitting, hunching, and screen fatigue. Begins with deep cervical spine and scapular acupressure, followed by heated organic herbal balm application to dissolve stubborn muscular knots and tension headaches.",
+    benefits: [
+      "Relieves chronic tech-neck, upper trap tightness & lower back stiffness",
+      "Dissolves tension headaches & restores neck mobility",
+      "Targeted acupressure with natural anti-inflammatory Thai Plai balm"
+    ],
+    durations: [
+      { minutes: 60, priceTHB: 550 },
+      { minutes: 90, priceTHB: 750, popular: true },
+      { minutes: 120, priceTHB: 950 }
+    ],
+    image: "./images/photoshoot/thai-stretch-shoulder.jpg",
+    tag: "Locals & Expats Favorite"
+  },
+  {
+    id: "jetlag-recovery-combo",
+    name: "Jet-Lag & Flight Recovery Combo",
+    category: "packages",
+    shortDescription: "60m Revitalizing Foot Reflexology + 60m Deep Tissue Aroma Oil for arriving travelers.",
+    fullDescription: "The gold standard recovery therapy for newly arrived travelers in Sukhumvit. Drains fluid buildup from long flights with 60 minutes of intensive foot and calf reflexology, followed by 60 minutes of rhythmic aromatherapy oil massage to calm circadian rhythms and induce deep restorative rest.",
+    benefits: [
+      "Reduces post-flight leg swelling & ankle edema",
+      "Resets circadian rhythm and promotes restful sleep",
+      "Total mind and body restoration after travel"
+    ],
+    durations: [
+      { minutes: 90, priceTHB: 850 },
+      { minutes: 120, priceTHB: 1050, popular: true }
+    ],
+    image: "./images/photoshoot/essential-oil-flower.jpg",
+    tag: "Traveler's Choice"
+  },
+  {
+    id: "shoppers-revival-package",
+    name: "Sukhumvit Shopper's Leg & Shoulder Revival",
+    category: "packages",
+    shortDescription: "60m Foot Reflexology + 30m Head, Neck & Shoulders to melt walking fatigue.",
+    fullDescription: "Designed for travelers returning with heavy shopping bags from Terminal 21, EmQuartier, or CentralWorld. Soothes aching arches and calf muscles with targeted pressure, followed by upper body releases for shoulders strained by carrying shopping bags.",
+    benefits: [
+      "Instant relief for aching feet, heels, and arches",
+      "Releases heavy shoulder tension from carrying shopping bags",
+      "Leaves you energized and ready for Bangkok nightlife"
+    ],
+    durations: [
+      { minutes: 90, priceTHB: 700, popular: true },
+      { minutes: 120, priceTHB: 900 }
+    ],
+    image: "./images/service-foot.jpg",
+    tag: "Post-Shopping Relief"
   }
 ];

@@ -2,6 +2,7 @@ import React from 'react';
 import { Sparkles, MapPin, Phone, MessageCircle, Heart } from 'lucide-react';
 import { BRANCHES } from '../data/branches';
 import type { Branch } from '../data/branches';
+import { PaymentBadges } from './PaymentBadges';
 import './Footer.css';
 
 interface FooterProps {
@@ -94,6 +95,9 @@ export const Footer: React.FC<FooterProps> = ({ onSelectBranch, onOpenBooking })
             </div>
           </div>
         </div>
+
+        {/* Accepted Payment Badges */}
+        <PaymentBadges compact />
 
         <div className="footer-bottom">
           <p>© {new Date().getFullYear()} Chacha Massage Bangkok. All Rights Reserved.</p>

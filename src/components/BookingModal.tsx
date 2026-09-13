@@ -5,6 +5,7 @@ import type { Branch } from '../data/branches';
 import { TREATMENTS } from '../data/treatments';
 import type { Treatment } from '../data/treatments';
 import { useLanguage } from '../context/LanguageContext';
+import { PaymentBadges } from './PaymentBadges';
 import './BookingModal.css';
 
 interface BookingModalProps {
@@ -314,6 +315,9 @@ export const BookingModal: React.FC<BookingModalProps> = ({
                   <span>Call {currentBranch.shortName}</span>
                 </a>
               </div>
+
+              {/* Accepted Payment Badges */}
+              <PaymentBadges compact />
             </div>
           </form>
         )}

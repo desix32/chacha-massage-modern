@@ -4,6 +4,7 @@ import { TREATMENTS, getTreatmentForBranch } from '../data/treatments';
 import type { Treatment } from '../data/treatments';
 import type { Branch } from '../data/branches';
 import { useLanguage } from '../context/LanguageContext';
+import { PaymentBadges } from './PaymentBadges';
 import './TreatmentMenu.css';
 
 interface TreatmentMenuProps {
@@ -164,6 +165,9 @@ export const TreatmentMenu: React.FC<TreatmentMenuProps> = ({ activeBranch, onSe
             <span>Ask Us Anything via WhatsApp</span>
           </a>
         </div>
+
+        {/* Accepted Payment Badges */}
+        <PaymentBadges />
       </div>
     </section>
   );

@@ -4,6 +4,7 @@ import { BRANCHES } from '../data/branches';
 import type { Branch } from '../data/branches';
 import { LanguageSelector } from './LanguageSelector';
 import { useLanguage } from '../context/LanguageContext';
+import { PaymentBadges } from './PaymentBadges';
 import './LandingPortal.css';
 
 interface LandingPortalProps {
@@ -200,6 +201,9 @@ export const LandingPortal: React.FC<LandingPortalProps> = ({ onSelectBranch }) 
               </article>
             ))}
           </div>
+
+          {/* Accepted Payment Badges */}
+          <PaymentBadges />
         </div>
       </main>
 

@@ -701,5 +701,176 @@ export const TREATMENT_TRANSLATIONS: Record<string, Record<SupportedLanguage, Tr
       tag: "Forfait d'exception",
       shortDescription: "2 heures de pur bien-être : 60 min Thaï ou pieds + 60 min huile tiède + dégustation de thé bio."
     }
+  },
+  "office-syndrome-ritual": {
+    en: {
+      name: "Office Syndrome Recovery Ritual",
+      tag: "Locals & Expats Favorite",
+      shortDescription: "Targeted upper back, neck, shoulders & cranial acupressure with warm herbal plai balm to cure screen fatigue."
+    },
+    th: {
+      name: "คอร์สบำบัดออฟฟิศซินโดรม",
+      tag: "ยอดนิยมสำหรับคนทำงาน",
+      shortDescription: "นวดเน้นคอบ่าไหล่ สะบัก และหลังส่วนบน ผสานยาหม่องไพลร้อนสมุนไพร เพื่อคลายพังผืดและแก้ปวดเกร็งจากการทำงาน"
+    },
+    ja: {
+      name: "オフィスシンドローム改善コース",
+      tag: "デスクワーク・在住者に人気",
+      shortDescription: "長時間のPC作業による首・肩のコリ、肩甲骨、背中を集中的にほぐし、温かいプライ（タイハーブ）バームで深部まで緩めます。"
+    },
+    zh: {
+      name: "办公室久坐综合症缓解套餐",
+      tag: "上班族与长居首选",
+      shortDescription: "针对久坐与手机低头族，深度按压肩颈、肩胛骨与上背经络，配合温热泰式草本膏快速化解僵硬结节。"
+    },
+    ko: {
+      name: "오피스 신드롬 집중 케어 코스",
+      tag: "직장인 추천 코스",
+      shortDescription: "장시간 컴퓨터와 스마트폰으로 굳어진 목, 어깨, 승모근, 등을 집중 지압하고 따뜻한 타이 허브 밤으로 깊은 뭉침을 풀어드립니다."
+    },
+    hi: {
+      name: "ऑफिस सिंड्रोम रिकवरी पैकेज",
+      tag: "कार्यक्षेत्र पसंदीदा",
+      shortDescription: "गर्दन, कंधों और पीठ के ऊपरी हिस्से के तनाव को दूर करने के लिए विशेष एक्यूप्रेशर और वॉर्म हर्बल बाम।"
+    },
+    ta: {
+      name: "அலுவலக உடல் சோர்வு நீக்கும் சிகிச்சை",
+      tag: "பணியாளர்கள் தேர்வு",
+      shortDescription: "கழுத்து, தோள்பட்டை மற்றும் முதுகு வலிகளை நீக்கும் இலக்கு வைக்கப்பட்ட அக்குபிரஷர் மற்றும் மூலிகை சிகிச்சை."
+    },
+    ar: {
+      name: "جلسة علاج متلازمة العمل المكتبي والرقبة",
+      tag: "المفضل للمقيمين",
+      shortDescription: "تدليك مركز للرقبة والأكتاف وأعلى الظهر مع مرهم الأعشاب الدافئ لتخفيف إجهاد الجلوس الطويل والكمبيوتر."
+    },
+    ru: {
+      name: "Программа «Анти-офисный синдром»",
+      tag: "Выбор для сидячей работы",
+      shortDescription: "Глубокая проработка шеи, плеч, лопаток и верхней части спины с согревающим тайским травяным бальзамом."
+    },
+    de: {
+      name: "Office-Syndrom Entspannungsritual",
+      tag: "Ideal bei Bildschirmarbeit",
+      shortDescription: "Gezielte Akupressur für Nacken, Schultern und oberen Rücken mit wärmendem thailändischem Kräuterbalsam."
+    },
+    fr: {
+      name: "Rituel Anti-Syndrome du Bureau",
+      tag: "Idéal Télétravail & Bureau",
+      shortDescription: "Soulagement ciblé de la nuque, des épaules et du haut du dos avec baume tiède aux herbes thaïlandaises."
+    }
+  },
+  "jetlag-recovery-combo": {
+    en: {
+      name: "Jet-Lag & Flight Recovery Combo",
+      tag: "Traveler's Choice",
+      shortDescription: "60m Revitalizing Foot Reflexology + 60m Deep Tissue Aroma Oil for arriving travelers."
+    },
+    th: {
+      name: "แพ็กเกจฟื้นฟูหลังเดินทางไกล (Jet-Lag)",
+      tag: "ยอดนิยมสำหรับนักท่องเที่ยว",
+      shortDescription: "นวดเท้าผ่อนคลาย 60 นาที + นวดน้ำมันอโรมาผ่อนคลายกล้ามเนื้อ 60 นาที เพื่อระบายความล้าและฟื้นฟูระบบการไหลเวียนหลังบิน"
+    },
+    ja: {
+      name: "時差ボケ＆フライトリカバリーコンボ",
+      tag: "旅行者人気No.1",
+      shortDescription: "フライト後のむくみを解消する足つぼ60分＋全身を包み込むアロマオイル60分で、旅の疲れをリセットします。"
+    },
+    zh: {
+      name: "长途飞行与时差恢复黄金套餐",
+      tag: "游客首选组合",
+      shortDescription: "60分钟足底经络去水肿＋60分钟全身芳香精油深度放松，迅速消除飞机舟车劳顿，恢复活力。"
+    },
+    ko: {
+      name: "시차 적응 & 장시간 비행 피로회복 콤보",
+      tag: "여행자 필수 코스",
+      shortDescription: "비행 후 다리 붓기를 빼주는 발 마사지 60분 + 전신 아로마 오일 60분으로 지친 몸을 완벽하게 재충전하세요."
+    },
+    hi: {
+      name: "जेट-लैग और यात्रा थकान निवारक कॉम्बो",
+      tag: "यात्रियों की पसंद",
+      shortDescription: "लंबी उड़ानों के बाद 60 मिनट फुट रिफ्लेक्सोलॉजी + 60 मिनट डीप टिशू अरोमा ऑयल मालिश।"
+    },
+    ta: {
+      name: "விமான பயண சோர்வு நீக்கும் காம்போ",
+      tag: "பயணிகள் விருப்பம்",
+      shortDescription: "60 நிமிடம் கால் மசாஜ் + 60 நிமிடம் அரோமா எண்ணெய் மசாஜ் மூலம் பயண சோர்வை போக்கும் சிறப்பு சிகிச்சை."
+    },
+    ar: {
+      name: "باقة التعافي من السفر وإرهاق الطيران",
+      tag: "خيار المسافرين الأول",
+      shortDescription: "60 دقيقة تدليك وتنشيط القدمين + 60 دقيقة مساج بالزيوت العطرية للاسترخاء العميق بعد الرحلات الجوية."
+    },
+    ru: {
+      name: "Пакет «Восстановление после перелета»",
+      tag: "Идеально после дороги",
+      shortDescription: "60 мин массажа уставших стоп + 60 мин расслабляющего арома-массажа для быстрого снятия джетлага."
+    },
+    de: {
+      name: "Jetlag & Flug-Erholungs-Kombi",
+      tag: "Empfehlung für Reisende",
+      shortDescription: "60 Min. vitalisierende Fußreflexzonenmassage + 60 Min. Tiefen-Aromaölmassage nach Langstreckenflügen."
+    },
+    fr: {
+      name: "Combo Récupération Post-Vol & Décalage Horaire",
+      tag: "Le Choix des Voyageurs",
+      shortDescription: "60 min de réflexologie plantaire + 60 min de massage aux huiles aromatiques pour récupérer du vol."
+    }
+  },
+  "shoppers-revival-package": {
+    en: {
+      name: "Sukhumvit Shopper's Leg & Shoulder Revival",
+      tag: "Post-Shopping Relief",
+      shortDescription: "60m Foot Reflexology + 30m Head, Neck & Shoulders to melt walking fatigue."
+    },
+    th: {
+      name: "แพ็กเกจคลายเมื่อยหลังช้อปปิ้ง",
+      tag: "คลายเมื่อยขาก้าวเดิน",
+      shortDescription: "นวดเท้าผ่อนคลาย 60 นาที + นวดคอบ่าไหล่ 30 นาที คลายกล้ามเนื้อขาที่เมื่อยล้าและไหล่ที่เกร็งจากการถือถุงช้อปปิ้ง"
+    },
+    ja: {
+      name: "お買い物帰りの足＆肩リフレッシュコース",
+      tag: "ショッピング後の癒し",
+      shortDescription: "ターミナル21等で歩き疲れた足裏・ふくらはぎ60分＋荷物で凝った首・肩30分の即効リフレッシュ。"
+    },
+    zh: {
+      name: "素坤逸购物暴走舒缓套餐",
+      tag: "逛街购物必备",
+      shortDescription: "60分钟足底和小腿排酸减压＋30分钟肩颈头部释压，专为商场购物暴走游客定制。"
+    },
+    ko: {
+      name: "쇼핑 후 다리 & 어깨 힐링 패키지",
+      tag: "쇼핑 후 필수 코스",
+      shortDescription: "쇼핑몰을 걸어 지친 발과 종아리 60분 + 무거운 짐으로 뭉친 목과 어깨 30분 집중 릴랙스."
+    },
+    hi: {
+      name: "शॉपिंग थकान निवारक लेग व शोल्डर पैकेज",
+      tag: "शॉपिंग के बाद राहत",
+      shortDescription: "पैदल चलने की थकान के लिए 60 मिनट फुट रिफ्लेक्सोलॉजी + 30 मिनट सिर, गर्दन और कंधे की मालिश।"
+    },
+    ta: {
+      name: "ஷாப்பிங் சோர்வு நீக்கும் சிகிச்சை",
+      tag: "ஷாப்பிங் பின் ஆசுவாசம்",
+      shortDescription: "60 நிமிடம் கால் மசாஜ் + 30 நிமிடம் தலை, கழுத்து மற்றும் தோள்பட்டை மசாஜ்."
+    },
+    ar: {
+      name: "باقة إنعاش القدمين والأكتاف بعد التسوق",
+      tag: "راحة بعد التسوق",
+      shortDescription: "60 دقيقة تدليك للقدمين المرهقتين من المشي + 30 دقيقة للرأس والرقبة والأكتاف المشدودة من حمل الأكياس."
+    },
+    ru: {
+      name: "Экспресс-восстановление после шопинга",
+      tag: "После долгих прогулок",
+      shortDescription: "60 мин массажа уставших ног + 30 мин проработки плеч и шеи после походов по торговым центрам Бангкока."
+    },
+    de: {
+      name: "Shopper's Erholungs-Paket für Beine & Schultern",
+      tag: "Nach dem Einkaufsbummel",
+      shortDescription: "60 Min. Fußreflexzonenmassage + 30 Min. Nacken- & Schultermassage nach dem Shoppingtag."
+    },
+    fr: {
+      name: "Revitalisation Après-Shopping Jambes & Épaules",
+      tag: "Soulagement Après-Shopping",
+      shortDescription: "60 min de réflexologie plantaire + 30 min tête, nuque et épaules pour effacer la fatigue de la marche."
+    }
   }
 };
