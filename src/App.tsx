@@ -13,10 +13,10 @@ import { FaqSection } from './components/FaqSection';
 import { Footer } from './components/Footer';
 import { MobileActionDock } from './components/MobileActionDock';
 import { BookingModal } from './components/BookingModal';
-import { WelcomeGateway } from './components/WelcomeGateway';
+import { LandingPortal } from './components/LandingPortal';
 
 export const App: React.FC = () => {
-  // Determine initial branch from URL params (?branch=soi13) or localStorage
+  // Determine initial branch from URL params (?branch=soi13) or default to Soi 13
   const [activeBranch, setActiveBranch] = useState<Branch>(() => {
     if (typeof window !== 'undefined') {
       const params = new URLSearchParams(window.location.search);
@@ -37,20 +37,17 @@ export const App: React.FC = () => {
     return BRANCHES[0];
   });
 
-  // Welcome Gateway opens on initial visit (or if ?gateway=1 is present)
-  const [isGatewayOpen, setIsGatewayOpen] = useState<boolean>(() => {
+  // Current view: 'portal' (dedicated landing page) or 'branch' (tailored branch website)
+  const [currentView, setCurrentView] = useState<'portal' | 'branch'>(() => {
     if (typeof window !== 'undefined') {
       const params = new URLSearchParams(window.location.search);
-      if (params.get('gateway') === '1' || params.get('gateway') === 'true') {
-        return true;
-      }
+      // If direct branch link e.g. in-store QR code ?branch=soi13
       if (params.has('branch')) {
-        return false;
+        return 'branch';
       }
-      const saved = localStorage.getItem('chacha_selected_branch');
-      return !saved;
     }
-    return false;
+    // Default to the dedicated attractive landing page
+    return 'portal';
   });
 
   // State for booking modal
@@ -58,11 +55,36 @@ export const App: React.FC = () => {
   const [selectedTreatment, setSelectedTreatment] = useState<Treatment | null>(null);
   const [selectedDuration, setSelectedDuration] = useState<number>(60);
 
-  // Sync branch changes to localStorage
+  // When clicking a branch on the Landing Portal
+  const handleSelectBranchFromPortal = (branch: Branch) => {
+    setActiveBranch(branch);
+    setCurrentView('branch');
+    try {
+      localStorage.setItem('chacha_selected_branch', branch.id);
+      window.history.pushState({}, '', `?branch=${branch.id}`);
+    } catch {
+      // ignore
+    }
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
+  // Return to the Landing Portal
+  const handleGoToPortal = () => {
+    setCurrentView('portal');
+    try {
+      window.history.pushState({}, '', window.location.pathname);
+    } catch {
+      // ignore
+    }
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
+  // Sync branch switch within branch view
   const handleSelectBranch = (branch: Branch) => {
     setActiveBranch(branch);
     try {
       localStorage.setItem('chacha_selected_branch', branch.id);
+      window.history.pushState({}, '', `?branch=${branch.id}`);
     } catch {
       // ignore
     }
@@ -93,6 +115,10 @@ export const App: React.FC = () => {
     }
   };
 
+  if (currentView === 'portal') {
+    return <LandingPortal onSelectBranch={handleSelectBranchFromPortal} />;
+  }
+
   return (
     <div className="spa-app">
       {/* Top Header & Navigation */}
@@ -100,7 +126,7 @@ export const App: React.FC = () => {
         activeBranch={activeBranch}
         onSelectBranch={handleSelectBranch}
         onOpenBooking={handleOpenGeneralBooking}
-        onOpenGateway={() => setIsGatewayOpen(true)}
+        onGoToPortal={handleGoToPortal}
       />
 
       {/* Main Experience */}
@@ -109,7 +135,7 @@ export const App: React.FC = () => {
         <Hero
           activeBranch={activeBranch}
           onOpenBooking={handleOpenGeneralBooking}
-          onOpenGateway={() => setIsGatewayOpen(true)}
+          onOpenGateway={handleGoToPortal}
         />
 
         {/* Treatment Menu with Dynamic Pricing & Durations */}
@@ -158,14 +184,6 @@ export const App: React.FC = () => {
         initialBranch={activeBranch}
         initialTreatment={selectedTreatment}
         initialDuration={selectedDuration}
-      />
-
-      {/* Welcome Gateway Modal / Overlay */}
-      <WelcomeGateway
-        isOpen={isGatewayOpen}
-        onClose={() => setIsGatewayOpen(false)}
-        activeBranch={activeBranch}
-        onSelectBranch={handleSelectBranch}
       />
     </div>
   );

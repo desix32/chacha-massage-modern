@@ -11,9 +11,10 @@ interface NavbarProps {
   onSelectBranch: (branch: Branch) => void;
   onOpenBooking: () => void;
   onOpenGateway?: () => void;
+  onGoToPortal?: () => void;
 }
 
-export const Navbar: React.FC<NavbarProps> = ({ activeBranch, onSelectBranch, onOpenBooking, onOpenGateway }) => {
+export const Navbar: React.FC<NavbarProps> = ({ activeBranch, onSelectBranch, onOpenBooking, onOpenGateway, onGoToPortal }) => {
   const { t } = useLanguage();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
@@ -39,7 +40,17 @@ export const Navbar: React.FC<NavbarProps> = ({ activeBranch, onSelectBranch, on
       <header className={`modern-navbar ${scrolled ? 'navbar-scrolled' : ''}`}>
         <div className="container nav-container">
           {/* Brand Logo */}
-          <a href="#" className="nav-brand">
+          <a 
+            href="#" 
+            className="nav-brand" 
+            onClick={(e) => {
+              if (onGoToPortal) {
+                e.preventDefault();
+                onGoToPortal();
+              }
+            }}
+            title="Return to All Branches"
+          >
             <img src="./images/logo.jpg" alt="Chacha Massage Bangkok" className="brand-logo-img" />
           </a>
 
@@ -88,7 +99,7 @@ export const Navbar: React.FC<NavbarProps> = ({ activeBranch, onSelectBranch, on
                       <span className="item-sub">{b.bts}</span>
                     </button>
                   ))}
-                  {onOpenGateway && (
+                  {(onGoToPortal || onOpenGateway) && (
                     <>
                       <div style={{ margin: '6px 0', borderTop: '1px solid rgba(255,255,255,0.08)' }} />
                       <button
@@ -96,11 +107,12 @@ export const Navbar: React.FC<NavbarProps> = ({ activeBranch, onSelectBranch, on
                         className="dropdown-item"
                         onClick={() => {
                           setBranchDropdownOpen(false);
-                          onOpenGateway();
+                          if (onGoToPortal) onGoToPortal();
+                          else if (onOpenGateway) onOpenGateway();
                         }}
                         style={{ color: '#d4af37', fontWeight: 600 }}
                       >
-                        ✦ View All Branches & Offers
+                        ✦ All 4 Branches & Offers
                       </button>
                     </>
                   )}
