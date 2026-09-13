@@ -112,7 +112,7 @@ export const Navbar: React.FC<NavbarProps> = ({ activeBranch, onSelectBranch, on
                         }}
                         style={{ color: '#d4af37', fontWeight: 600 }}
                       >
-                        ✦ All 4 Branches & Offers
+                        ✦ All 5 Branches & Offers
                       </button>
                     </>
                   )}
