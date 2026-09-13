@@ -2,15 +2,20 @@ import React, { useState, useEffect } from 'react';
 import { Menu, X, Phone, MessageCircle, MapPin, Sparkles } from 'lucide-react';
 import { BRANCHES } from '../data/branches';
 import type { Branch } from '../data/branches';
+import { useLanguage } from '../context/LanguageContext';
+import { LanguageSelector } from './LanguageSelector';
 import './Navbar.css';
 
 interface NavbarProps {
   activeBranch: Branch;
   onSelectBranch: (branch: Branch) => void;
   onOpenBooking: () => void;
+  onOpenGateway?: () => void;
+  onGoToPortal?: () => void;
 }
 
-export const Navbar: React.FC<NavbarProps> = ({ activeBranch, onSelectBranch, onOpenBooking }) => {
+export const Navbar: React.FC<NavbarProps> = ({ activeBranch, onSelectBranch, onOpenBooking, onOpenGateway, onGoToPortal }) => {
+  const { t } = useLanguage();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [branchDropdownOpen, setBranchDropdownOpen] = useState(false);
@@ -27,30 +32,43 @@ export const Navbar: React.FC<NavbarProps> = ({ activeBranch, onSelectBranch, on
     <>
       <div className="top-announcement-bar">
         <div className="container announcement-content">
-          <span>✨ 18-Year Anniversary Promotion: <strong>18% OFF</strong> All Specialty Treatments</span>
-          <a href="#treatments" className="announcement-link">Explore Specials →</a>
+          <span>✨ <strong>CHACHA MASSAGE</strong> Bangkok • Traditional Thai & Sanctuary Spa</span>
+          <a href="#treatments" className="announcement-link">{t('nav_treatments')} →</a>
         </div>
       </div>
 
       <header className={`modern-navbar ${scrolled ? 'navbar-scrolled' : ''}`}>
         <div className="container nav-container">
           {/* Brand Logo */}
-          <a href="#" className="nav-brand">
+          <a 
+            href="#" 
+            className="nav-brand" 
+            onClick={(e) => {
+              if (onGoToPortal) {
+                e.preventDefault();
+                onGoToPortal();
+              }
+            }}
+            title="Return to All Branches"
+          >
             <img src="./images/logo.jpg" alt="Chacha Massage Bangkok" className="brand-logo-img" />
           </a>
 
           {/* Desktop Navigation Links */}
           <nav className="desktop-nav-links">
-            <a href="#treatments" className="nav-link">Treatments & Pricing</a>
-            <a href="#branches" className="nav-link">Locations</a>
-            <a href="#about" className="nav-link">Our Heritage</a>
-            <a href="#gallery" className="nav-link">Gallery</a>
-            <a href="#reviews" className="nav-link">Reviews</a>
-            <a href="#faq" className="nav-link">FAQ</a>
+            <a href="#treatments" className="nav-link">{t('nav_treatments')}</a>
+            <a href="#branches" className="nav-link">{t('nav_locations')}</a>
+            <a href="#about" className="nav-link">{t('nav_heritage')}</a>
+            <a href="#gallery" className="nav-link">{t('nav_gallery')}</a>
+            <a href="#reviews" className="nav-link">{t('nav_reviews')}</a>
+            <a href="#faq" className="nav-link">{t('nav_faq')}</a>
           </nav>
 
-          {/* Right Actions: Branch Quick Selector & Booking */}
+          {/* Right Actions: Branch Quick Selector, Language Selector & Booking */}
           <div className="nav-right-actions">
+            {/* Language Selector */}
+            <LanguageSelector />
+
             {/* Branch Dropdown */}
             <div className="branch-dropdown-wrapper">
               <button 
@@ -81,6 +99,23 @@ export const Navbar: React.FC<NavbarProps> = ({ activeBranch, onSelectBranch, on
                       <span className="item-sub">{b.bts}</span>
                     </button>
                   ))}
+                  {(onGoToPortal || onOpenGateway) && (
+                    <>
+                      <div style={{ margin: '6px 0', borderTop: '1px solid rgba(255,255,255,0.08)' }} />
+                      <button
+                        type="button"
+                        className="dropdown-item"
+                        onClick={() => {
+                          setBranchDropdownOpen(false);
+                          if (onGoToPortal) onGoToPortal();
+                          else if (onOpenGateway) onOpenGateway();
+                        }}
+                        style={{ color: '#d4af37', fontWeight: 600 }}
+                      >
+                        ✦ All 5 Branches & Offers
+                      </button>
+                    </>
+                  )}
                 </div>
               )}
             </div>
@@ -104,7 +139,7 @@ export const Navbar: React.FC<NavbarProps> = ({ activeBranch, onSelectBranch, on
               onClick={onOpenBooking}
             >
               <Sparkles size={16} />
-              <span>Book Session</span>
+              <span>{t('nav_book')}</span>
             </button>
 
             {/* Mobile Hamburger Toggle */}
@@ -123,6 +158,10 @@ export const Navbar: React.FC<NavbarProps> = ({ activeBranch, onSelectBranch, on
         {mobileMenuOpen && (
           <div className="mobile-nav-drawer">
             <div className="mobile-branch-bar">
+              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '8px' }}>
+                <div className="mobile-branch-label">Language / ภาษา:</div>
+                <LanguageSelector compact />
+              </div>
               <div className="mobile-branch-label">Active Branch:</div>
               <div className="mobile-branch-chips">
                 {BRANCHES.map(b => (
@@ -142,12 +181,12 @@ export const Navbar: React.FC<NavbarProps> = ({ activeBranch, onSelectBranch, on
             </div>
 
             <nav className="mobile-links-list">
-              <a href="#treatments" onClick={() => setMobileMenuOpen(false)}>Treatments & Pricing</a>
-              <a href="#branches" onClick={() => setMobileMenuOpen(false)}>Locations & Directions</a>
-              <a href="#about" onClick={() => setMobileMenuOpen(false)}>Our Heritage & Team</a>
-              <a href="#gallery" onClick={() => setMobileMenuOpen(false)}>Spa Gallery</a>
-              <a href="#reviews" onClick={() => setMobileMenuOpen(false)}>Customer Reviews</a>
-              <a href="#faq" onClick={() => setMobileMenuOpen(false)}>Frequently Asked Questions</a>
+              <a href="#treatments" onClick={() => setMobileMenuOpen(false)}>{t('nav_treatments')}</a>
+              <a href="#branches" onClick={() => setMobileMenuOpen(false)}>{t('nav_locations')}</a>
+              <a href="#about" onClick={() => setMobileMenuOpen(false)}>{t('nav_heritage')}</a>
+              <a href="#gallery" onClick={() => setMobileMenuOpen(false)}>{t('nav_gallery')}</a>
+              <a href="#reviews" onClick={() => setMobileMenuOpen(false)}>{t('nav_reviews')}</a>
+              <a href="#faq" onClick={() => setMobileMenuOpen(false)}>{t('nav_faq')}</a>
             </nav>
 
             <div className="mobile-drawer-footer">
@@ -158,14 +197,14 @@ export const Navbar: React.FC<NavbarProps> = ({ activeBranch, onSelectBranch, on
                 className="btn btn-whatsapp w-full"
               >
                 <MessageCircle size={18} />
-                <span>WhatsApp Booking ({activeBranch.shortName})</span>
+                <span>WhatsApp ({activeBranch.shortName})</span>
               </a>
               <a 
                 href={`tel:${activeBranch.phoneRaw}`}
                 className="btn btn-secondary w-full"
               >
                 <Phone size={18} />
-                <span>Call Branch ({activeBranch.phone})</span>
+                <span>{t('dock_call')} ({activeBranch.phone})</span>
               </a>
             </div>
           </div>

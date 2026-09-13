@@ -1,8 +1,11 @@
 import React from 'react';
 import { Award, Leaf, HeartHandshake, ShieldCheck } from 'lucide-react';
+import { useLanguage } from '../context/LanguageContext';
 import './AboutHeritage.css';
 
 export const AboutHeritage: React.FC = () => {
+  const { t } = useLanguage();
+
   return (
     <section className="about-section" id="about">
       <div className="container">
@@ -33,15 +36,13 @@ export const AboutHeritage: React.FC = () => {
 
           {/* Content Column */}
           <div className="about-content-col">
-            <div className="section-tag">Our Living Heritage</div>
-            <h2 className="section-title">The Art of Mindful Thai Healing</h2>
+            <div className="section-tag">{t('about_tag')}</div>
+            <h2 className="section-title">{t('about_title')}</h2>
             <p className="about-lead">
-              Founded over two decades ago in the heart of Sukhumvit, Chacha Massage was born from a singular passion:
-              to preserve the sacred, therapeutic lineage of authentic Royal Thai bodywork in modern, tranquil sanctuary spaces.
+              {t('about_desc_1')}
             </p>
             <p className="about-body">
-              Unlike commercial massage parlors that rush appointments, our licensed master practitioners tailor every technique
-              to your anatomy—relieving deep chronic tension, stimulating energetic sen lines, and restoring vital balance.
+              {t('about_desc_2')}
             </p>
 
             <div className="about-pillars">

@@ -1,3 +1,9 @@
+export interface BranchSpecialOffer {
+  badge: string;
+  highlight: string;
+  promoText: string;
+}
+
 export interface Branch {
   id: string;
   name: string;
@@ -14,75 +20,142 @@ export interface Branch {
   googleMapsUrl: string;
   image: string;
   interiorImages: string[];
+  specialOffer?: BranchSpecialOffer;
+  isComingSoon?: boolean;
 }
 
 export const BRANCHES: Branch[] = [
   {
-    id: "soi15",
-    name: "Chacha Massage @ Sukhumvit Soi 15",
-    shortName: "@ Soi 15",
-    tagline: "Flagship Tranquil Oasis",
-    address: "Sukhumvit Soi 15, Khlong Toei Nuea, Watthana, Bangkok 10110",
-    district: "Sukhumvit / Asok",
-    bts: "BTS Asok & MRT Sukhumvit (5 min walk)",
-    phone: "+66 80 453 0982",
+    id: "soi13",
+    name: "Chacha Massage @ Sukhumvit Soi 13",
+    shortName: "@ Soi 13",
+    tagline: "Quiet Peaceful Retreat",
+    address: "The Trendy Building, 10/12 Sukhumvit Soi 13, Khlong Toei Nuea, Watthana, Bangkok 10110",
+    district: "Sukhumvit 13 / Nana-Asok",
+    bts: "BTS Nana / Asok (6 min walk)",
+    phone: "080 453 0982",
     phoneRaw: "+66804530982",
     whatsapp: "+66804530982",
-    whatsappUrl: "https://wa.me/66804530982?text=Hello%20Chacha%20Massage%20Soi%2015,%20I%20would%20like%20to%20inquire%20about%20booking%20a%20session.",
-    hours: "10:00 AM – 11:30 PM Daily",
-    googleMapsUrl: "https://maps.google.com/?q=Sukhumvit+Soi+15+Bangkok",
-    image: "./images/soi15-gallery.jpg",
-    interiorImages: ["./images/soi15-gallery.jpg", "./images/gallery-1.jpg", "./images/gallery-2.jpg"]
+    whatsappUrl: "https://wa.me/66804530982?text=Hello%20Chacha%20Massage%20Soi%2013,%20I%20would%20like%20to%20inquire%20about%20booking%20a%20session.",
+    hours: "9:00 AM – Midnight Daily",
+    googleMapsUrl: "https://www.google.com/maps/place/The+Trendy+Building/@13.7403827,100.5578057,17z/data=!3m1!4b1!4m6!3m5!1s0x30e29fa9d0381497:0x524dad67eb707a4b!8m2!3d13.7403827!4d100.5578057!16s%2Fg%2F11b7yb3zhh",
+    image: "./images/soi13-interior.jpg",
+    interiorImages: ["./images/soi13-interior.jpg", "./images/gallery-3.jpg", "./images/gallery-4.jpg"],
+    specialOffer: {
+      badge: "Official Signboard Rates",
+      highlight: "Foot 350 THB • Thai 400 THB",
+      promoText: "Direct street pricing from illuminated signboard. Open daily until midnight."
+    }
   },
   {
     id: "soi11",
     name: "Chacha Massage @ Sukhumvit Soi 11",
     shortName: "@ Soi 11",
     tagline: "Vibrant Urban Sanctuary",
-    address: "Sukhumvit Soi 11, Khlong Toei Nuea, Watthana, Bangkok 10110",
+    address: "717 Sukhumvit Rd (Soi 11), Khlong Toei Nuea, Watthana, Bangkok 10110",
     district: "Nana / Sukhumvit 11",
     bts: "BTS Nana (4 min walk)",
-    phone: "+66 80 453 0982",
-    phoneRaw: "+66804530982",
+    phone: "02 082 5468 / 092 828 5468",
+    phoneRaw: "+6620825468",
     whatsapp: "+66804530982",
     whatsappUrl: "https://wa.me/66804530982?text=Hello%20Chacha%20Massage%20Soi%2011,%20I%20would%20like%20to%20inquire%20about%20booking%20a%20session.",
-    hours: "10:00 AM – Midnight Daily",
-    googleMapsUrl: "https://maps.google.com/?q=Sukhumvit+Soi+11+Bangkok",
+    hours: "9:00 AM – Midnight Daily",
+    googleMapsUrl: "https://www.google.com/maps/place/Chacha+Massage+(Sukhumvit+Soi+11)/@13.7403069,100.556332,17z/data=!3m1!4b1!4m6!3m5!1s0x30e29f353a3cf03d:0xa7c7beef6688d3d7!8m2!3d13.7403069!4d100.556332!16s%2Fg%2F11h7_qy5vm",
     image: "./images/soi11-front.jpg",
-    interiorImages: ["./images/soi11-room.jpg", "./images/soi11-interior.jpg", "./images/photoshoot/team-full-reception.jpg"]
+    interiorImages: ["./images/soi11-room.jpg", "./images/soi11-interior.jpg", "./images/photoshoot/team-full-reception.jpg"],
+    specialOffer: {
+      badge: "Night Life Haven",
+      highlight: "Aroma Therapy & Late Night Care",
+      promoText: "Perfect post-dinner relaxation in the heart of Soi 11. Open until midnight."
+    }
   },
   {
     id: "ambassador",
     name: "Chacha Massage @ Ambassador Hotel",
     shortName: "@ Ambassador",
     tagline: "Hotel Luxury & Wellness",
-    address: "Ambassador Hotel Bangkok, 171 Sukhumvit 11, Bangkok 10110",
+    address: "Ambassador Hotel Bangkok, 171 Sukhumvit 11 Aly, Bangkok 10110",
     district: "Sukhumvit 11 / Nana",
     bts: "BTS Nana (3 min walk)",
-    phone: "+66 80 453 0982",
-    phoneRaw: "+66804530982",
+    phone: "02 255 8499",
+    phoneRaw: "+6622558499",
     whatsapp: "+66804530982",
     whatsappUrl: "https://wa.me/66804530982?text=Hello%20Chacha%20Massage%20Ambassador,%20I%20would%20like%20to%20inquire%20about%20booking%20a%20session.",
-    hours: "10:00 AM – 11:00 PM Daily",
-    googleMapsUrl: "https://maps.google.com/?q=Ambassador+Hotel+Bangkok",
+    hours: "9:00 AM – Midnight Daily",
+    googleMapsUrl: "https://www.google.com/maps/place/Chacha+Massage3+(Ambassador+Hotel)/@13.7416294,100.5565333,17z/data=!3m1!4b1!4m6!3m5!1s0x30e29f7a67b1f243:0x5e15bfef94dee0db!8m2!3d13.7416294!4d100.5565333!16s%2Fg%2F11xdbf2fyr",
     image: "./images/ambassador-front.jpg",
-    interiorImages: ["./images/ambassador-interior-1.jpg", "./images/ambassador-interior-2.jpg"]
+    interiorImages: ["./images/ambassador-interior-1.jpg", "./images/ambassador-interior-2.jpg"],
+    specialOffer: {
+      badge: "Executive Spa Suites",
+      highlight: "Hot Oil Herbal Compress Synergy",
+      promoText: "Quiet hotel enclave with spacious couple private suites. Open until midnight."
+    }
   },
   {
-    id: "soi13",
-    name: "Chacha Massage @ Sukhumvit Soi 13",
-    shortName: "@ Soi 13",
-    tagline: "Quiet Peaceful Retreat",
-    address: "Sukhumvit Soi 13, Khlong Toei Nuea, Watthana, Bangkok 10110",
-    district: "Sukhumvit 13 / Nana-Asok",
-    bts: "BTS Nana / Asok (6 min walk)",
-    phone: "+66 80 453 0982",
+    id: "soi15",
+    name: "Chacha Massage @ Sukhumvit Soi 15",
+    shortName: "@ Soi 15",
+    tagline: "Flagship Tranquil Oasis",
+    address: "Next to Night Hotel, 14/3 Sukhumvit 15, Khlong Toei Nuea, Watthana, Bangkok 10110",
+    district: "Sukhumvit / Asok",
+    bts: "BTS Asok & MRT Sukhumvit (5 min walk)",
+    phone: "02 001 7659 / 081 696 5982",
+    phoneRaw: "+66816965982",
+    whatsapp: "+66816965982",
+    whatsappUrl: "https://wa.me/66816965982?text=Hello%20Chacha%20Massage%20Soi%2015,%20I%20would%20like%20to%20inquire%20about%20booking%20a%20session.",
+    hours: "9:00 AM – Midnight Daily",
+    googleMapsUrl: "https://www.google.com/maps/place/Chacha+Massage/@13.7406429,100.5590871,17z/data=!3m1!4b1!4m6!3m5!1s0x30e29ee43f83aead:0xaf83ebcd103dbfb7!8m2!3d13.7406429!4d100.5590871!16s%2Fg%2F1ydpv9wfp",
+    image: "./images/soi15-gallery.jpg",
+    interiorImages: ["./images/soi15-gallery.jpg", "./images/gallery-1.jpg", "./images/gallery-2.jpg"],
+    specialOffer: {
+      badge: "Tranquil Oasis",
+      highlight: "Deep Tissue & Herbal Steam",
+      promoText: "Tucked off Sukhumvit near Terminal 21 with lush quiet ambience. Open until midnight."
+    }
+  },
+  {
+    id: "asoke",
+    name: "Chacha Massage @ Asoke (Sukhumvit 21)",
+    shortName: "@ Asoke",
+    tagline: "Prime CBD Wellness Sanctuary",
+    address: "32/3-4 Sukhumvit 21 Rd (Asoke), Khlong Toei Nuea, Watthana, Bangkok 10110",
+    district: "Asoke / Sukhumvit 21",
+    bts: "BTS Asok & MRT Sukhumvit (3 min walk)",
+    phone: "02 120 4061",
+    phoneRaw: "+6621204061",
+    whatsapp: "+66804530982",
+    whatsappUrl: "https://wa.me/66804530982?text=Hello%20Chacha%20Massage%20Asoke,%20I%20would%20like%20to%20inquire%20about%20booking%20a%20session.",
+    hours: "9:00 AM – Midnight Daily",
+    googleMapsUrl: "https://www.google.com/maps/place/CHACHA+MASSAGE+ASOKE/data=!4m7!3m6!1s0x30e29f0057fc8093:0x1513d295d5cd936a!8m2!3d13.7406195!4d100.5620582!16s%2Fg%2F11wv6yfh00!19sChIJk4D8VwCf4jARapPN1ZXSExU",
+    image: "./images/gallery-5.jpg",
+    interiorImages: ["./images/gallery-5.jpg", "./images/photoshoot/private-suite-bed.jpg", "./images/gallery-6.jpg"],
+    specialOffer: {
+      badge: "Asoke CBD Sanctuary",
+      highlight: "Aromatherapy & Deep Stress Relief",
+      promoText: "Prime Sukhumvit 21 location steps from BTS Asok & MRT. Open daily until midnight."
+    }
+  },
+  {
+    id: "sukhumvit-coming-soon",
+    name: "Chacha Massage @ Sukhumvit (Coming Soon)",
+    shortName: "Coming Soon",
+    tagline: "New Luxury Sanctuary Opening Soon",
+    address: "Prime Sukhumvit Location, Bangkok",
+    district: "Sukhumvit Corridor",
+    bts: "BTS Sukhumvit Line",
+    phone: "080 453 0982 (Inquiries)",
     phoneRaw: "+66804530982",
     whatsapp: "+66804530982",
-    whatsappUrl: "https://wa.me/66804530982?text=Hello%20Chacha%20Massage%20Soi%2013,%20I%20would%20like%20to%20inquire%20about%20booking%20a%20session.",
-    hours: "10:30 AM – 11:00 PM Daily",
-    googleMapsUrl: "https://maps.google.com/?q=Sukhumvit+Soi+13+Bangkok",
-    image: "./images/soi13-interior.jpg",
-    interiorImages: ["./images/soi13-interior.jpg", "./images/gallery-3.jpg", "./images/gallery-4.jpg"]
+    whatsappUrl: "https://wa.me/66804530982?text=Hello%20Chacha%20Massage,%20I%20would%20like%20to%20inquire%20about%20the%20new%20Sukhumvit%20branch%20opening.",
+    hours: "Opening Soon • Late 2026",
+    googleMapsUrl: "https://maps.google.com/?q=Sukhumvit+Bangkok",
+    image: "./images/about-wellbeing.jpg",
+    interiorImages: ["./images/about-wellbeing.jpg", "./images/photoshoot/private-suite-bed.jpg", "./images/gallery-7.jpg"],
+    isComingSoon: true,
+    specialOffer: {
+      badge: "✨ Coming Soon",
+      highlight: "VIP Pre-Opening Preview & Inquiries",
+      promoText: "Our newest flagship oasis in Sukhumvit. Inquire via WhatsApp for grand opening invitations."
+    }
   }
 ];

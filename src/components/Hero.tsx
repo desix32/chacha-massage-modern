@@ -1,14 +1,18 @@
 import React from 'react';
 import { Sparkles, MessageCircle, ShieldCheck, Award, MapPin, Clock } from 'lucide-react';
 import type { Branch } from '../data/branches';
+import { useLanguage } from '../context/LanguageContext';
 import './Hero.css';
 
 interface HeroProps {
   activeBranch: Branch;
   onOpenBooking: () => void;
+  onOpenGateway?: () => void;
 }
 
-export const Hero: React.FC<HeroProps> = ({ activeBranch, onOpenBooking }) => {
+export const Hero: React.FC<HeroProps> = ({ activeBranch, onOpenBooking, onOpenGateway }) => {
+  const { t } = useLanguage();
+
   return (
     <section className="hero-section">
       {/* Ambient background with overlay */}
@@ -22,31 +26,42 @@ export const Hero: React.FC<HeroProps> = ({ activeBranch, onOpenBooking }) => {
           {/* Tagline Badge */}
           <div className="hero-badge">
             <Sparkles size={16} className="text-coral" />
-            <span>Authentic Thai Healing Since 2002 • 23 Years of Mastery</span>
+            <span>{t('hero_badge')}</span>
           </div>
 
           {/* Main Title */}
           <h1 className="hero-title">
-            Rebalance Your Body. <br />
-            <span className="text-serif-italic">Awaken Your Serenity.</span>
+            {t('hero_title_1')} <br />
+            <span className="text-serif-italic">{t('hero_title_2')}</span>
           </h1>
 
           {/* Subtitle */}
           <p className="hero-desc">
-            Escape Bangkok’s bustling energy. Experience authentic Royal Thai acupressure, 
-            restorative herbal heat therapies, and customized botanical oil treatments in our tranquil private sanctuaries.
+            {t('hero_desc')}
           </p>
 
-          {/* Active Branch Callout Card */}
+          {/* Active Branch Callout Card with tailored offer */}
           <div className="hero-branch-pill">
             <div className="branch-pill-left">
               <span className="pill-status-dot" />
               <div>
                 <strong className="branch-pill-name">{activeBranch.name}</strong>
-                <span className="branch-pill-sub">{activeBranch.bts} • Open {activeBranch.hours}</span>
+                <span className="branch-pill-sub">{activeBranch.bts} • {t('hero_open_daily')}</span>
+                {activeBranch.specialOffer && (
+                  <div style={{ marginTop: '4px', fontSize: '0.78rem', color: '#d4af37', fontWeight: 600 }}>
+                    ✦ {activeBranch.specialOffer.badge}: {activeBranch.specialOffer.highlight}
+                  </div>
+                )}
               </div>
             </div>
-            <a href="#branches" className="branch-pill-switch">Change Branch ▾</a>
+            <button 
+              type="button" 
+              className="branch-pill-switch" 
+              onClick={onOpenGateway ? onOpenGateway : undefined}
+              style={{ background: 'none', border: 'none', cursor: 'pointer', fontFamily: 'inherit' }}
+            >
+              {t('hero_change_branch')}
+            </button>
           </div>
 
           {/* CTA Buttons */}
@@ -57,7 +72,7 @@ export const Hero: React.FC<HeroProps> = ({ activeBranch, onOpenBooking }) => {
               onClick={onOpenBooking}
             >
               <Sparkles size={18} />
-              <span>Book Your Sanctuary Session</span>
+              <span>{t('hero_cta')}</span>
             </button>
 
             <a 
@@ -67,7 +82,7 @@ export const Hero: React.FC<HeroProps> = ({ activeBranch, onOpenBooking }) => {
               className="btn btn-whatsapp hero-btn-sub"
             >
               <MessageCircle size={20} />
-              <span>Instant WhatsApp Booking</span>
+              <span>{t('whatsapp_confirm_btn')}</span>
             </a>
           </div>
 
@@ -75,19 +90,19 @@ export const Hero: React.FC<HeroProps> = ({ activeBranch, onOpenBooking }) => {
           <div className="hero-trust-bar">
             <div className="trust-item">
               <Award size={20} className="trust-icon" />
-              <span>23+ Years Master Therapists</span>
+              <span>{t('trust_experience')}</span>
             </div>
             <div className="trust-item">
               <ShieldCheck size={20} className="trust-icon" />
-              <span>Pristine Private Suites</span>
+              <span>{t('trust_hygiene')}</span>
             </div>
             <div className="trust-item">
               <MapPin size={20} className="trust-icon" />
-              <span>4 Sukhumvit Prime Locations</span>
+              <span>{t('trust_bts')}</span>
             </div>
             <div className="trust-item">
               <Clock size={20} className="trust-icon" />
-              <span>Zero Hidden Fees</span>
+              <span>{t('net_fees')}</span>
             </div>
           </div>
         </div>
