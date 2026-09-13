@@ -7,9 +7,10 @@ import './Hero.css';
 interface HeroProps {
   activeBranch: Branch;
   onOpenBooking: () => void;
+  onOpenGateway?: () => void;
 }
 
-export const Hero: React.FC<HeroProps> = ({ activeBranch, onOpenBooking }) => {
+export const Hero: React.FC<HeroProps> = ({ activeBranch, onOpenBooking, onOpenGateway }) => {
   const { t } = useLanguage();
 
   return (
@@ -39,16 +40,28 @@ export const Hero: React.FC<HeroProps> = ({ activeBranch, onOpenBooking }) => {
             {t('hero_desc')}
           </p>
 
-          {/* Active Branch Callout Card */}
+          {/* Active Branch Callout Card with tailored offer */}
           <div className="hero-branch-pill">
             <div className="branch-pill-left">
               <span className="pill-status-dot" />
               <div>
                 <strong className="branch-pill-name">{activeBranch.name}</strong>
                 <span className="branch-pill-sub">{activeBranch.bts} • {t('hero_open_daily')}</span>
+                {activeBranch.specialOffer && (
+                  <div style={{ marginTop: '4px', fontSize: '0.78rem', color: '#d4af37', fontWeight: 600 }}>
+                    ✦ {activeBranch.specialOffer.badge}: {activeBranch.specialOffer.highlight}
+                  </div>
+                )}
               </div>
             </div>
-            <a href="#branches" className="branch-pill-switch">{t('hero_change_branch')}</a>
+            <button 
+              type="button" 
+              className="branch-pill-switch" 
+              onClick={onOpenGateway ? onOpenGateway : undefined}
+              style={{ background: 'none', border: 'none', cursor: 'pointer', fontFamily: 'inherit' }}
+            >
+              {t('hero_change_branch')}
+            </button>
           </div>
 
           {/* CTA Buttons */}

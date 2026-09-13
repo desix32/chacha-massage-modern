@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Clock, Sparkles, Check, MessageCircle } from 'lucide-react';
-import { TREATMENTS } from '../data/treatments';
+import { TREATMENTS, getTreatmentForBranch } from '../data/treatments';
 import type { Treatment } from '../data/treatments';
 import type { Branch } from '../data/branches';
 import { useLanguage } from '../context/LanguageContext';
@@ -33,9 +33,10 @@ export const TreatmentMenu: React.FC<TreatmentMenuProps> = ({ activeBranch, onSe
     { id: 'packages', label: t('cat_packages') }
   ];
 
-  const filteredTreatments = activeCategory === 'all' 
+  const filteredTreatments = (activeCategory === 'all' 
     ? TREATMENTS 
-    : TREATMENTS.filter(t => t.category === activeCategory);
+    : TREATMENTS.filter(t => t.category === activeCategory)
+  ).map(treat => getTreatmentForBranch(treat, activeBranch.id));
 
   const handleDurationChange = (treatmentId: string, minutes: number) => {
     setSelectedDurations(prev => ({ ...prev, [treatmentId]: minutes }));

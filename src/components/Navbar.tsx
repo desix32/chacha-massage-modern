@@ -10,9 +10,10 @@ interface NavbarProps {
   activeBranch: Branch;
   onSelectBranch: (branch: Branch) => void;
   onOpenBooking: () => void;
+  onOpenGateway?: () => void;
 }
 
-export const Navbar: React.FC<NavbarProps> = ({ activeBranch, onSelectBranch, onOpenBooking }) => {
+export const Navbar: React.FC<NavbarProps> = ({ activeBranch, onSelectBranch, onOpenBooking, onOpenGateway }) => {
   const { t } = useLanguage();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
@@ -87,6 +88,22 @@ export const Navbar: React.FC<NavbarProps> = ({ activeBranch, onSelectBranch, on
                       <span className="item-sub">{b.bts}</span>
                     </button>
                   ))}
+                  {onOpenGateway && (
+                    <>
+                      <div style={{ margin: '6px 0', borderTop: '1px solid rgba(255,255,255,0.08)' }} />
+                      <button
+                        type="button"
+                        className="dropdown-item"
+                        onClick={() => {
+                          setBranchDropdownOpen(false);
+                          onOpenGateway();
+                        }}
+                        style={{ color: '#d4af37', fontWeight: 600 }}
+                      >
+                        ✦ View All Branches & Offers
+                      </button>
+                    </>
+                  )}
                 </div>
               )}
             </div>

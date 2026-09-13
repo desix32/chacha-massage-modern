@@ -4,6 +4,12 @@ export interface TreatmentDuration {
   popular?: boolean;
 }
 
+export interface BranchPricingOverride {
+  durations?: TreatmentDuration[];
+  tag?: string;
+  promoBadge?: string;
+}
+
 export interface Treatment {
   id: string;
   name: string;
@@ -14,6 +20,19 @@ export interface Treatment {
   durations: TreatmentDuration[];
   image: string;
   tag?: string;
+  branchOverrides?: Record<string, BranchPricingOverride>;
+}
+
+export function getTreatmentForBranch(treatment: Treatment, branchId: string): Treatment {
+  if (treatment.branchOverrides && treatment.branchOverrides[branchId]) {
+    const override = treatment.branchOverrides[branchId];
+    return {
+      ...treatment,
+      durations: override.durations || treatment.durations,
+      tag: override.tag || treatment.tag
+    };
+  }
+  return treatment;
 }
 
 export const TREATMENTS: Treatment[] = [
