@@ -207,7 +207,7 @@ export const BookingModal: React.FC<BookingModalProps> = ({
                     {[
                       '10:30', '11:00', '11:30', '12:00', '13:00', '14:00', 
                       '15:00', '16:00', '17:00', '18:00', '19:00', '20:00', 
-                      '21:00', '22:00'
+                      '21:00', '22:00', '22:30', '23:00'
                     ].map(slot => (
                       <option key={slot} value={slot}>{slot}</option>
                     ))}
